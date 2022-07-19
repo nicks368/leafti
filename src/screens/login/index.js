@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { CheckBox, StyleSheet } from 'react-native';
 
 import { 
   Titulo, KeyView, Input, BotaoEnviar,
   TextoBotao, TextLink, TextoEmpresa, 
-  ContainerTextEmp, ContainerForm, ContainerLogo
+  ContainerTextEmp, ContainerForm, ContainerLogo,
+  Container, ContainerGoogle, BtnGoogle, TextGoogle,
+  IconGoogle, CheckboxContainer, TextoCheckbox
 } from './styles';
 
 import LogoLogin from '../../components/logo-login';
@@ -13,6 +16,8 @@ import { Jura_400Regular } from '@expo-google-fonts/jura';
 import AppLoading from 'expo-app-loading';
 
 export default function Login({navigation}) {
+  const [senha, setSenha]= useState('');
+  const [hidePass, setHidepass]= useState(false);
 
   const [ fontsLoaded]  = useFonts({
     Jura_400Regular,
@@ -34,7 +39,21 @@ export default function Login({navigation}) {
       <Titulo>Login</Titulo>
         
       <Input placeholder="E-mail"/>
-      <Input secureTextEntry="true" placeholder="Senha"/>
+      <Input 
+        value={senha} 
+        onChangeText={(senha)=> {setSenha(senha) }} 
+        secureTextEntry={(!hidePass)} 
+        placeholder="Senha"
+      />
+
+      <CheckboxContainer>
+          <CheckBox
+            value={hidePass}
+            onValueChange={setHidepass }
+          />
+          <TextoCheckbox> Mostrar senha </TextoCheckbox>
+        </CheckboxContainer>
+
       <TextLink> Esqueci minha senha</TextLink>
         
       <BotaoEnviar>
@@ -42,8 +61,21 @@ export default function Login({navigation}) {
        </BotaoEnviar>
       </ContainerForm>
 
-      <ContainerTextEmp> 
-        <TextLink onPress={()=> {navigation.navigate('Cadastro')}}> Não possui uma conta? Cadastre-se</TextLink>
+      <ContainerGoogle>
+        <TextGoogle>Entrar com:</TextGoogle>
+
+        <BtnGoogle>
+          <IconGoogle 
+            source={require('../../../assets/imgs/icon-google-1.svg')}  
+          />
+        </BtnGoogle>
+
+        <TextLink onPress={()=> {navigation.navigate('Cadastro')}}>
+          Não possui uma conta? Cadastre-se
+        </TextLink>
+      </ContainerGoogle>
+
+      <ContainerTextEmp>
         <TextoEmpresa source={require('../../../assets/imgs/slogan.svg')}/>
       </ContainerTextEmp>
       

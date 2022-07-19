@@ -7,7 +7,7 @@ const [ fontsLoaded]  = useFonts({
     Jura_400Regular,
     Lexend_300Light,
     Roboto_400Regular,
-    'agency_fb':require('../../../assets/fonts/agency_fb.ttf')
+    'agency_fb':require('../../assets/fonts/agency_fb.ttf')
 })
 
 export default fontsLoaded;

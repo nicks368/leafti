@@ -9,7 +9,7 @@ export default function Search() {
       justifyContent: 'center',
       alignItems: 'center',
       }}>
-        <Text style={{fontSize: 60}}> PESQUISAR </Text>
+        <Text> PESQUISAR </Text>
        
       </View>
   );

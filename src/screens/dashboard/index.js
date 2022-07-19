@@ -9,7 +9,7 @@ export default function Dashboard() {
       justifyContent: 'center',
       alignItems: 'center',
       }}>
-        <Text style={{fontSize: 60}}> PLANTAR </Text>
+        <Text > PLANTAR </Text>
        
       </View>
   );

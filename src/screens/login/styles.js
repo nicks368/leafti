@@ -11,7 +11,7 @@ export const ContainerLogo = styled.View`
 `
 
 export const ContainerForm = styled.View`
-    flex: 2;
+    flex: 3;
     width: 70vw;
 `
 
@@ -30,12 +30,12 @@ export const Input = styled.TextInput`
     padding: 10px;
     margin-bottom: 10px;
     font-family: 'Lexend_300Light';
-    font-size: 4vw;
+    font-size: 4.5vw;
     color: #707070;
 `
 
 export const TextLink = styled.Text`
-    font-size: 3.5vw;
+    font-size: 4vw;
     font-family: 'Lexend_300Light';
     text-decoration: underline;
     align-self: flex-start;
@@ -70,5 +70,43 @@ export const TextoEmpresa = styled.Image`
     height: 40px;
     align-self: center;
     
+`
+
+export const ContainerGoogle = styled.View`
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+`
+
+export const TextGoogle = styled.Text`
+    font-size: 6.5vw;
+    font-family: 'Lexend_300Light';
+    margin-bottom: 10px;
+`
+
+export const BtnGoogle = styled.TouchableOpacity`
+    width: 75px;
+    height: 75px;
+    background-color: #E2E2E2;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    margin-bottom: 10px;
+` 
+export const IconGoogle = styled.Image`
+   width: 65px;
+   height: 65px;
+`
+
+export const CheckboxContainer = styled.View`
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 8px;
+`
+
+export const TextoCheckbox = styled.Text`
+    font-family: 'Lexend_300Light';
+    color: #7A7A7A;
 `
     

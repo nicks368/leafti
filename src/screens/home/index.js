@@ -1,15 +1,12 @@
 import React from 'react';
 import { BtnPag, Container } from './styles';
 
-export default function Home({navigation}) {
+export default function Home() {
   return (
     <Container>
-      <BtnPag onPress={() => navigation.navigate('login')}> Profile </BtnPag>
+      
 
     </Container>
   );
 }
 
-Home.navigationOptions = {
-  title: 'home',
-}

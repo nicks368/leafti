@@ -1,18 +1,25 @@
 import styled from "styled-components/native";
 
-export const KeyView = styled.KeyboardAvoidingView`
+export const Container = styled.View`
     flex: 1;
+    align-items: center;
+    font-family: 'Lexend_300Light';
+`
+
+export const KeyView = styled.KeyboardAvoidingView`
+    flex: 3;
     align-items: center;  
 `
+
 export const ContainerLogo = styled.View`
-    flex: 1;
+    flex: 0.5;
     align-items: flex-start;
     width: 90%;
 `
 
 export const ContainerForm = styled.View`
-    flex: 5;
-    width: 80%;   
+    flex: 1;
+    width: 100%;   
 `
 
 export const Titulo = styled.Text`
@@ -79,7 +86,7 @@ export const InputCelular = styled.TextInput`
 `
 
 export const TextLink = styled.Text`
-    font-size: 3.5vw;
+    font-size: 4.5vw;
     font-family: 'Lexend_300Light';
     text-decoration: underline;
     margin-bottom: 20px;
@@ -102,7 +109,7 @@ export const TextoBotao = styled.Text`
     color: #FFF;
 `
 export const ContainerTextEmp = styled.View`
-    flex: 1;
+    flex: 0.3;
     width: 63vw;
     justify-content: flex-end;
     align-items: center;
@@ -113,5 +120,43 @@ export const TextoEmpresa = styled.Image`
     height: 40px;
     align-self: center;
     
+`
+
+export const ContainerGoogle = styled.View`
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+`
+
+export const TextGoogle = styled.Text`
+    font-size: 6vw;
+    font-family: 'Lexend_300Light';
+    margin-bottom: 10px;
+`
+
+export const BtnGoogle = styled.TouchableOpacity`
+    width: 70px;
+    height: 70px;
+    background-color: #E2E2E2;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    margin-bottom: 10px;
+` 
+export const IconGoogle = styled.Image`
+   width: 60px;
+   height: 60px;
+`
+
+export const CheckboxContainer = styled.View`
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 8px;
+`
+
+export const TextoCheckbox = styled.Text`
+    font-family: 'Lexend_300Light';
+    color: #7A7A7A;
 `
     

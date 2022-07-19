@@ -9,7 +9,7 @@ export default function Calendario() {
       justifyContent: 'center',
       alignItems: 'center',
       }}>
-        <Text style={{fontSize: 60}}> AGENDA </Text>
+        <Text> AGENDA </Text>
        
       </View>
   );
