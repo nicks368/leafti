@@ -1,5 +1,5 @@
 import React, { useState}  from 'react';
-import { CheckBox, StyleSheet } from 'react-native';
+import Checkbox from 'expo-checkbox';
 
 import { 
   Titulo, KeyView, BotaoEnviar, InputEmailSenha,
@@ -7,7 +7,7 @@ import {
   ContainerTextEmp, ContainerForm, InputNomeSobrenome, 
   ContainerNome, ContainerCelular, InputDdd, InputCelular,
   Container, ContainerGoogle, TextGoogle, BtnGoogle, IconGoogle,
-  CheckboxContainer, TextoCheckbox
+  CheckboxContainer, TextoCheckbox, DismissKeyboard
 } from './styles';
 
 import LogoCadastro from '../../components/logo-cadastro';
@@ -15,6 +15,7 @@ import { useFonts, Lexend_300Light } from '@expo-google-fonts/lexend';
 import { Roboto_400Regular } from '@expo-google-fonts/roboto';
 import { Jura_400Regular } from '@expo-google-fonts/jura';
 import AppLoading from 'expo-app-loading';
+import { Keyboard } from 'react-native';
 
 export default function Cadastro({navigation}) {
   const [senha, setSenha]= useState('');
@@ -34,8 +35,8 @@ export default function Cadastro({navigation}) {
   }
 
   return (
-    <Container>
-      
+    <DismissKeyboard onPress={() =>Keyboard.dismiss()}>
+    <Container> 
       <ContainerLogo>
         <LogoCadastro/>
       </ContainerLogo>
@@ -70,7 +71,7 @@ export default function Cadastro({navigation}) {
             />
 
             <CheckboxContainer>
-              <CheckBox
+              <Checkbox
                 style={{width: 15, height: 15, marginLeft: 5, }}
                 value={hidePass}
                 onValueChange={setHidepass }
@@ -102,6 +103,7 @@ export default function Cadastro({navigation}) {
       </ContainerTextEmp>
       
     </Container>
+    </DismissKeyboard>
   );
 }
 

@@ -43,7 +43,7 @@ export default function AppRoutes(){
                 options={{
                     tabBarLabel: '',
                     tabBarIcon: ({ focused}) => (
-                        <Ionicons name="home" size= '35px' color={focused ? '#1C6119' : '#fff'}/>
+                        <Ionicons name="home" style={{fontSize: 35}} color={focused ? '#1C6119' : '#fff'}/>
                     ),
                     headerLeft: ()=> (
                         <LogoHeader/>
@@ -58,7 +58,7 @@ export default function AppRoutes(){
                  options={{
                     tabBarLabel: '',
                     tabBarIcon: ({focused}) => (
-                        <Ionicons name="search" size= '35px'  color={focused ? '#1C6119' : '#fff'}/>
+                        <Ionicons name="search" style={{fontSize: 35}} color={focused ? '#1C6119' : '#fff'}/>
                     ),
                     headerLeft: ()=> (
                         <LogoHeader/>
@@ -72,7 +72,7 @@ export default function AppRoutes(){
                 options={{
                     tabBarLabel: '',
                     tabBarIcon: ({focused}) => (
-                        <Feather name="calendar" size= '35px'  color={focused ? '#1C6119' : '#fff'}/>
+                        <Feather name="calendar" style={{fontSize: 35}} color={focused ? '#1C6119' : '#fff'}/>
                     ),
                     headerLeft: ()=> (
                         <LogoHeader/>
@@ -86,7 +86,7 @@ export default function AppRoutes(){
                  options={{
                     tabBarLabel: '',
                     tabBarIcon: ({focused}) => (
-                        <MaterialIcons name="dashboard" size= '35px'  color={focused ? '#1C6119' : '#fff'}/>
+                        <MaterialIcons name="dashboard" style={{fontSize: 35}} color={focused ? '#1C6119' : '#fff'}/>
                     ),
                     headerLeft: ()=> (
                         <LogoHeader/>
@@ -111,7 +111,7 @@ export default function AppRoutes(){
                     },
                     tabBarLabel: '',
                     tabBarIcon: ({focused}) => (
-                        <MaterialCommunityIcons name="account" size= '35px'  color={focused ? '#1C6119' : '#fff'}/>
+                        <MaterialCommunityIcons name="account" style={{fontSize: 35}} color={focused ? '#1C6119' : '#fff'}/>
                     ),
                     headerLeft: ()=> (
                         <LogoHeader/>

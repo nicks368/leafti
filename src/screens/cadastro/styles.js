@@ -1,5 +1,9 @@
 import styled from "styled-components/native";
 
+export const DismissKeyboard = styled.TouchableWithoutFeedback`
+    
+`
+
 export const Container = styled.View`
     flex: 1;
     align-items: center;
@@ -9,6 +13,7 @@ export const Container = styled.View`
 export const KeyView = styled.KeyboardAvoidingView`
     flex: 3;
     align-items: center;  
+    width: 80%;
 `
 
 export const ContainerLogo = styled.View`
@@ -24,20 +29,20 @@ export const ContainerForm = styled.View`
 
 export const Titulo = styled.Text`
     color: #1C6119;
-    font-size: 12vw;
+    font-size: 40px;
     font-family: 'Lexend_300Light';
     margin-bottom: 20px;
     align-self: center;
 `;
 
 export const InputEmailSenha = styled.TextInput`
-    width: 80vw;
+    width: 100%;
     border: 1px solid #1C6119;
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 10px;
     font-family: 'Lexend_300Light';
-    font-size: 4vw;
+    font-size: 16px;
     color: #707070;
 `
 
@@ -48,13 +53,13 @@ export const ContainerNome = styled.View`
 `
 
 export const InputNomeSobrenome = styled.TextInput`
-    width: 39vw;
+    width: 49%;
     border: 1px solid #1C6119;
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 10px;
     font-family: 'Lexend_300Light';
-    font-size: 4vw;
+    font-size: 16px;
     color: #707070;
 `
 export const ContainerCelular = styled.View`    
@@ -64,29 +69,29 @@ export const ContainerCelular = styled.View`
 `
 
 export const InputDdd = styled.TextInput`
-    width: 19vw;
+    width: 21%;
     border: 1px solid #1C6119;
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 10px;
     font-family: 'Lexend_300Light';
-    font-size: 4vw;
+    font-size: 16px;
     color: #707070;
 `
 
 export const InputCelular = styled.TextInput`
-    width: 59vw;
+    width: 77%;
     border: 1px solid #1C6119;
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 10px;
     font-family: 'Lexend_300Light';
-    font-size: 4vw;
+    font-size: 16px;
     color: #707070;
 `
 
 export const TextLink = styled.Text`
-    font-size: 4.5vw;
+    font-size: 16px;
     font-family: 'Lexend_300Light';
     text-decoration: underline;
     margin-bottom: 20px;
@@ -95,7 +100,7 @@ export const TextLink = styled.Text`
 
 export const BotaoEnviar = styled.TouchableOpacity`
     background-color: #56AB2F;
-    width: 80vw;
+    width: 100%;
     padding: 8px;
     box-shadow: 2px 2px #1C6119;
     border-radius: 10px;
@@ -110,7 +115,7 @@ export const TextoBotao = styled.Text`
 `
 export const ContainerTextEmp = styled.View`
     flex: 0.3;
-    width: 63vw;
+    width: 100%;
     justify-content: flex-end;
     align-items: center;
 `
@@ -130,7 +135,7 @@ export const ContainerGoogle = styled.View`
 `
 
 export const TextGoogle = styled.Text`
-    font-size: 6vw;
+    font-size: 20px;
     font-family: 'Lexend_300Light';
     margin-bottom: 10px;
 `
@@ -141,7 +146,7 @@ export const BtnGoogle = styled.TouchableOpacity`
     background-color: #E2E2E2;
     justify-content: center;
     align-items: center;
-    border-radius: 100%;
+    border-radius: 100px;
     margin-bottom: 10px;
 ` 
 export const IconGoogle = styled.Image`
@@ -156,6 +161,7 @@ export const CheckboxContainer = styled.View`
 `
 
 export const TextoCheckbox = styled.Text`
+    font-size: 16px;
     font-family: 'Lexend_300Light';
     color: #7A7A7A;
 `

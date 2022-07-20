@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import { CheckBox, StyleSheet } from 'react-native';
+import Checkbox from 'expo-checkbox';
+import { Keyboard } from 'react-native';
 
 import { 
-  Titulo, KeyView, Input, BotaoEnviar,
+  Titulo, Input, BotaoEnviar,
   TextoBotao, TextLink, TextoEmpresa, 
   ContainerTextEmp, ContainerForm, ContainerLogo,
   Container, ContainerGoogle, BtnGoogle, TextGoogle,
-  IconGoogle, CheckboxContainer, TextoCheckbox
+  IconGoogle, CheckboxContainer, TextoCheckbox, DismissKeyboard
 } from './styles';
 
 import LogoLogin from '../../components/logo-login';
@@ -29,57 +30,59 @@ export default function Login({navigation}) {
   if (!fontsLoaded){
     <AppLoading />
   }
+
   return (
-  <KeyView>
-    <ContainerLogo>
-      <LogoLogin />
-    </ContainerLogo>   
+    <DismissKeyboard onPress={()=> Keyboard.dismiss()}>
+      <Container>
+        <ContainerLogo>
+            <LogoLogin />
+        </ContainerLogo>  
 
-    <ContainerForm> 
-      <Titulo>Login</Titulo>
-        
-      <Input placeholder="E-mail"/>
-      <Input 
-        value={senha} 
-        onChangeText={(senha)=> {setSenha(senha) }} 
-        secureTextEntry={(!hidePass)} 
-        placeholder="Senha"
-      />
-
-      <CheckboxContainer>
-          <CheckBox
-            value={hidePass}
-            onValueChange={setHidepass }
+        <ContainerForm> 
+          <Titulo>Login</Titulo>
+              
+          <Input placeholder="E-mail"/>
+          <Input 
+            value={senha} 
+            onChangeText={(senha)=> {setSenha(senha) }} 
+            secureTextEntry={(!hidePass)} 
+            placeholder="Senha"
           />
-          <TextoCheckbox> Mostrar senha </TextoCheckbox>
-        </CheckboxContainer>
+          
+          <CheckboxContainer>
+            <Checkbox
+              value={hidePass}
+              onValueChange={setHidepass }
+            />
+            <TextoCheckbox> Mostrar senha </TextoCheckbox>
+          </CheckboxContainer>
 
-      <TextLink> Esqueci minha senha</TextLink>
-        
-      <BotaoEnviar>
-       <TextoBotao> Entrar </TextoBotao>
-       </BotaoEnviar>
-      </ContainerForm>
+          <TextLink> Esqueci minha senha</TextLink>
+              
+          <BotaoEnviar>
+            <TextoBotao> Entrar </TextoBotao>
+          </BotaoEnviar>
+        </ContainerForm>
 
-      <ContainerGoogle>
-        <TextGoogle>Entrar com:</TextGoogle>
+        <ContainerGoogle>
+          <TextGoogle>Entrar com:</TextGoogle>
 
-        <BtnGoogle>
-          <IconGoogle 
-            source={require('../../../assets/imgs/icon-google-1.svg')}  
-          />
-        </BtnGoogle>
+          <BtnGoogle>
+            <IconGoogle 
+              source={require('../../../assets/imgs/icon-google-1.svg')}  
+            />
+          </BtnGoogle>
 
-        <TextLink onPress={()=> {navigation.navigate('Cadastro')}}>
-          Não possui uma conta? Cadastre-se
-        </TextLink>
-      </ContainerGoogle>
+          <TextLink onPress={()=> {navigation.navigate('Cadastro')}}>
+            Não possui uma conta? Cadastre-se
+          </TextLink>
+        </ContainerGoogle>
 
-      <ContainerTextEmp>
-        <TextoEmpresa source={require('../../../assets/imgs/slogan.svg')}/>
-      </ContainerTextEmp>
-      
-   </KeyView>
+        <ContainerTextEmp>
+          <TextoEmpresa source={require('../../../assets/imgs/slogan.svg')}/>
+        </ContainerTextEmp>
 
+      </Container>
+    </DismissKeyboard>
   );
-};
+}
