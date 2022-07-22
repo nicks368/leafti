@@ -1,5 +1,6 @@
 import React, { useState}  from 'react';
 import Checkbox from 'expo-checkbox';
+import * as AuthSession from 'expo-auth-session';
 
 import { 
   Titulo, KeyView, BotaoEnviar, InputEmailSenha,
@@ -18,6 +19,29 @@ import AppLoading from 'expo-app-loading';
 import { Keyboard } from 'react-native';
 
 export default function Cadastro({navigation}) {
+  async function handleSignIn() {
+    try{
+      const CLIENT_ID = '235483201751-qkvaou91qg2i5hbc0ba4ggvv087rd2j9.apps.googleusercontent.com';
+      const REDIRECT_URI = 'https://auth.expo.io/@nicks368/leafti';
+      const RESPONSE_TYPE = 'token';
+      const SCOPE = encodeURIComponent('profile email');
+      
+      const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=${SCOPE}`;
+      
+      const response = await AuthSession.startAsync({authUrl});
+      console.log(response);
+
+      navigation.navigate('Perfil');
+      
+    } catch(error) {
+
+        console.log(error);
+    }
+
+
+    
+  }
+  
   const [senha, setSenha]= useState('');
   const [confSenha, setConfSenha]= useState('');
   const [hidePass, setHidepass]= useState(false);
@@ -50,7 +74,7 @@ export default function Cadastro({navigation}) {
             <InputNomeSobrenome placeholder="Sobrenome"/>
           </ContainerNome>
           
-          <InputEmailSenha placeholder="E-mail"/>
+          <InputEmailSenha placeholder="E-Mail"/>
 
           <ContainerCelular>
             <InputDdd placeholder="DDD" keyboardType="numeric" maxLength={2}/>
@@ -87,19 +111,19 @@ export default function Cadastro({navigation}) {
       </KeyView>
 
       <ContainerGoogle>
-        <TextGoogle>Cadastrar com:</TextGoogle>
+        <TextGoogle>Cadastre-se com:</TextGoogle>
 
-        <BtnGoogle>
+        <BtnGoogle onPress={handleSignIn}>
           <IconGoogle 
-            source={require('../../../assets/imgs/icon-google-1.svg')}  
+            source={require('../../../assets/imgs/icon-google-1.png')}  
           />
         </BtnGoogle>
 
-        <TextLink onPress={() => navigation.goBack()}> Ja possui uma conta?</TextLink>
+        <TextLink style={{fontSize: 14}} onPress={() => navigation.goBack()}>Já possui uma conta?</TextLink>
       </ContainerGoogle>
 
       <ContainerTextEmp> 
-        <TextoEmpresa source={require('../../../assets/imgs/slogan.svg')}/>
+        <TextoEmpresa source={require('../../../assets/imgs/slogan.png')}/>
       </ContainerTextEmp>
       
     </Container>

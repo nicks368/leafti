@@ -5,7 +5,7 @@ import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
 
 export default function LogoCadastro() {
   return (  
-    <View style={{flexDirection: 'row', marginTop: '5%'}}>
+    <View style={{flexDirection: 'row', marginTop: '5%', alignItems: 'center'}}>
         <Logo 
           source={require('../../../assets/imgs/logo-header.png')}
           style={{width: RFPercentage(4), height: RFPercentage(4)}}  

@@ -9,7 +9,7 @@ const Stack = createNativeStackNavigator();
 export default function MeuStack() {
     return (
         <Stack.Navigator>
-            <Stack.Screen name="Perfil" component={Profile} options={{headerShown: false}} />
+            <Stack.Screen name="Profile" component={Profile} options={{headerShown: false}} />
             <Stack.Screen name="Login" component={Login} />
             <Stack.Screen name="Cadastro" component={Cadastro} />
         </Stack.Navigator>

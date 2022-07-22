@@ -76,7 +76,7 @@ export const TextoEmpresa = styled.Image`
     width: 112px;
     height: 40px;
     align-self: center;
-    
+    margin-bottom: 5px;
 `
 
 export const ContainerGoogle = styled.View`

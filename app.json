@@ -2,6 +2,8 @@
   "expo": {
     "name": "leafti",
     "slug": "leafti",
+    "scheme": "leafti",
+    "owner": "nicks368",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -18,13 +20,15 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.nicks368.leafti"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.nicks368.leafti"
     },
     "web": {
       "favicon": "./assets/favicon.png"

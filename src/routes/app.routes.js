@@ -1,4 +1,5 @@
 import React from 'react';
+import { StyleSheet } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 import LogoHeader from '../components/logo-header';
@@ -26,13 +27,15 @@ export default function AppRoutes(){
                     borderTopEndRadius: 10,
                     height: 60,
                     alignContent: 'center',
-                    justifyContent: 'center'
+                    justifyContent: 'center',
                 },
                 tabBarActiveTintColor: 'blue',
                 headerStyle:{
                     backgroundColor: '#56AB2F',
-                },   
-                
+                }, 
+                headerTitleStyle: {
+                    color: 'white',
+                }
             }}
            
             
@@ -43,7 +46,7 @@ export default function AppRoutes(){
                 options={{
                     tabBarLabel: '',
                     tabBarIcon: ({ focused}) => (
-                        <Ionicons name="home" style={{fontSize: 35}} color={focused ? '#1C6119' : '#fff'}/>
+                        <Ionicons name="home" style={estilos.icones} color={focused ? '#1C6119' : '#fff'}/>
                     ),
                     headerLeft: ()=> (
                         <LogoHeader/>
@@ -53,12 +56,12 @@ export default function AppRoutes(){
             />
 
             <Tab.Screen
-                 name="Search" 
+                 name="Pesquisar" 
                  component={Search}
                  options={{
                     tabBarLabel: '',
                     tabBarIcon: ({focused}) => (
-                        <Ionicons name="search" style={{fontSize: 35}} color={focused ? '#1C6119' : '#fff'}/>
+                        <Ionicons name="search" style={estilos.icones} color={focused ? '#1C6119' : '#fff'}/>
                     ),
                     headerLeft: ()=> (
                         <LogoHeader/>
@@ -67,12 +70,12 @@ export default function AppRoutes(){
             />
 
             <Tab.Screen
-                name="Calendario" 
+                name="Calendário" 
                 component={Calendario}
                 options={{
                     tabBarLabel: '',
                     tabBarIcon: ({focused}) => (
-                        <Feather name="calendar" style={{fontSize: 35}} color={focused ? '#1C6119' : '#fff'}/>
+                        <Feather name="calendar" style={estilos.icones} color={focused ? '#1C6119' : '#fff'}/>
                     ),
                     headerLeft: ()=> (
                         <LogoHeader/>
@@ -81,12 +84,12 @@ export default function AppRoutes(){
             />
 
             <Tab.Screen
-                 name="Dash" 
+                 name="Plantar" 
                  component={Dashboard}
                  options={{
                     tabBarLabel: '',
                     tabBarIcon: ({focused}) => (
-                        <MaterialIcons name="dashboard" style={{fontSize: 35}} color={focused ? '#1C6119' : '#fff'}/>
+                        <MaterialIcons name="dashboard" style={estilos.icones} color={focused ? '#1C6119' : '#fff'}/>
                     ),
                     headerLeft: ()=> (
                         <LogoHeader/>
@@ -95,7 +98,7 @@ export default function AppRoutes(){
             />
 
             <Tab.Screen
-                name="Profile"
+                name="Perfil"
                 component={MeuStack}
                 options={({route}) => ({
                     headerShown: getVisibilidadeHeader(route),
@@ -111,7 +114,7 @@ export default function AppRoutes(){
                     },
                     tabBarLabel: '',
                     tabBarIcon: ({focused}) => (
-                        <MaterialCommunityIcons name="account" style={{fontSize: 35}} color={focused ? '#1C6119' : '#fff'}/>
+                        <MaterialCommunityIcons name="account" style={estilos.icones} color={focused ? '#1C6119' : '#fff'}/>
                     ),
                     headerLeft: ()=> (
                         <LogoHeader/>
@@ -143,4 +146,11 @@ const getVisibilidadeHeader = route => {
   }
   return true;
 }
+
+const estilos = StyleSheet.create ({
+    icones: {
+        fontSize: 35,
+        marginTop: 10,
+    }
+})
 

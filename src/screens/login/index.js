@@ -41,7 +41,7 @@ export default function Login({navigation}) {
         <ContainerForm> 
           <Titulo>Login</Titulo>
               
-          <Input placeholder="E-mail"/>
+          <Input placeholder="E-Mail"/>
           <Input 
             value={senha} 
             onChangeText={(senha)=> {setSenha(senha) }} 
@@ -57,7 +57,7 @@ export default function Login({navigation}) {
             <TextoCheckbox> Mostrar senha </TextoCheckbox>
           </CheckboxContainer>
 
-          <TextLink> Esqueci minha senha</TextLink>
+          <TextLink>Esqueci minha senha</TextLink>
               
           <BotaoEnviar>
             <TextoBotao> Entrar </TextoBotao>
@@ -69,7 +69,7 @@ export default function Login({navigation}) {
 
           <BtnGoogle>
             <IconGoogle 
-              source={require('../../../assets/imgs/icon-google-1.svg')}  
+              source={require('../../../assets/imgs/icon-google-1.png')}  
             />
           </BtnGoogle>
 
@@ -79,7 +79,7 @@ export default function Login({navigation}) {
         </ContainerGoogle>
 
         <ContainerTextEmp>
-          <TextoEmpresa source={require('../../../assets/imgs/slogan.svg')}/>
+          <TextoEmpresa source={require('../../../assets/imgs/slogan.png')}/>
         </ContainerTextEmp>
 
       </Container>

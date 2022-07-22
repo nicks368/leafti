@@ -124,7 +124,7 @@ export const TextoEmpresa = styled.Image`
     width: 112px;
     height: 40px;
     align-self: center;
-    
+    margin-bottom: 5px;
 `
 
 export const ContainerGoogle = styled.View`
@@ -135,14 +135,14 @@ export const ContainerGoogle = styled.View`
 `
 
 export const TextGoogle = styled.Text`
-    font-size: 20px;
+    font-size: 16px;
     font-family: 'Lexend_300Light';
     margin-bottom: 10px;
 `
 
 export const BtnGoogle = styled.TouchableOpacity`
-    width: 70px;
-    height: 70px;
+    width: 55px;
+    height: 55px;
     background-color: #E2E2E2;
     justify-content: center;
     align-items: center;
@@ -150,8 +150,8 @@ export const BtnGoogle = styled.TouchableOpacity`
     margin-bottom: 10px;
 ` 
 export const IconGoogle = styled.Image`
-   width: 60px;
-   height: 60px;
+   width: 45px;
+   height: 45px;
 `
 
 export const CheckboxContainer = styled.View`
