@@ -1,4 +1,5 @@
 import styled from "styled-components/native";
+import { StyleSheet } from "react-native";
 
 export const Container = styled.View`
     flex: 1;
@@ -39,6 +40,7 @@ export const BtnOpcao = styled.TouchableOpacity`
     align-items: center;
     padding-left: 10px;
     margin-top: 12px;
+    
 `
 export const TextBtn = styled.Text`
     font-size: 20px;

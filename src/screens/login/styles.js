@@ -17,13 +17,13 @@ export const ContainerLogo = styled.View`
 `
 
 export const ContainerForm = styled.View`
-    flex: 3;
+    flex: 2;
     width: 70%;
 `
 
 export const Titulo = styled.Text`
     color: #1C6119;
-    font-size: 45px;
+    font-size: 40px;
     font-family: 'Lexend_300Light';
     margin-bottom: 20px;
     align-self: center;
@@ -33,10 +33,10 @@ export const Input = styled.TextInput`
     width: 100%;
     border: 1px solid #1C6119;
     border-radius: 10px;
-    padding: 10px;
+    padding: 8px;
     margin-bottom: 10px;
     font-family: 'Lexend_300Light';
-    font-size: 16px;
+    font-size: 14px;
     color: #707070;
 `
 
@@ -59,7 +59,7 @@ export const BotaoEnviar = styled.TouchableOpacity`
 `
 
 export const TextoBotao = styled.Text`
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     font-family: 'Lexend_300Light';
     color: #FFF;
@@ -80,21 +80,21 @@ export const TextoEmpresa = styled.Image`
 `
 
 export const ContainerGoogle = styled.View`
-    flex: 2;
+    flex: 1;
     justify-content: center;
     align-items: center;
     text-align: center;  
 `
 
 export const TextGoogle = styled.Text`
-    font-size: 22px;
+    font-size: 20px;
     font-family: 'Lexend_300Light';
     margin-bottom: 10px;
 `
 
 export const BtnGoogle = styled.TouchableOpacity`
-    width: 75px;
-    height: 75px;
+    width: 65px;
+    height: 65px;
     background-color: #E2E2E2;
     justify-content: center;
     align-items: center;
@@ -103,8 +103,8 @@ export const BtnGoogle = styled.TouchableOpacity`
 ` 
 
 export const IconGoogle = styled.Image`
-   width: 65px;
-   height: 65px;
+   width: 55px;
+   height: 55px;
 `
 
 export const CheckboxContainer = styled.View`

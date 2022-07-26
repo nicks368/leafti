@@ -11,9 +11,9 @@ export const Container = styled.View`
 `
 
 export const KeyView = styled.KeyboardAvoidingView`
-    flex: 3;
+    flex: 2;
     align-items: center;  
-    width: 80%;
+    width: 75%;
 `
 
 export const ContainerLogo = styled.View`
@@ -29,7 +29,7 @@ export const ContainerForm = styled.View`
 
 export const Titulo = styled.Text`
     color: #1C6119;
-    font-size: 40px;
+    font-size: 38px;
     font-family: 'Lexend_300Light';
     margin-bottom: 20px;
     align-self: center;
@@ -39,10 +39,10 @@ export const InputEmailSenha = styled.TextInput`
     width: 100%;
     border: 1px solid #1C6119;
     border-radius: 10px;
-    padding: 10px;
+    padding: 8px;
     margin-bottom: 10px;
     font-family: 'Lexend_300Light';
-    font-size: 16px;
+    font-size: 14px;
     color: #707070;
 `
 
@@ -56,10 +56,10 @@ export const InputNomeSobrenome = styled.TextInput`
     width: 49%;
     border: 1px solid #1C6119;
     border-radius: 10px;
-    padding: 10px;
+    padding: 6px;
     margin-bottom: 10px;
     font-family: 'Lexend_300Light';
-    font-size: 16px;
+    font-size: 14px;
     color: #707070;
 `
 export const ContainerCelular = styled.View`    
@@ -72,10 +72,10 @@ export const InputDdd = styled.TextInput`
     width: 21%;
     border: 1px solid #1C6119;
     border-radius: 10px;
-    padding: 10px;
+    padding: 6px;
     margin-bottom: 10px;
     font-family: 'Lexend_300Light';
-    font-size: 16px;
+    font-size: 14px;
     color: #707070;
 `
 
@@ -83,10 +83,10 @@ export const InputCelular = styled.TextInput`
     width: 77%;
     border: 1px solid #1C6119;
     border-radius: 10px;
-    padding: 10px;
+    padding: 6px;
     margin-bottom: 10px;
     font-family: 'Lexend_300Light';
-    font-size: 16px;
+    font-size: 14px;
     color: #707070;
 `
 
@@ -100,7 +100,7 @@ export const TextLink = styled.Text`
 
 export const BotaoEnviar = styled.TouchableOpacity`
     background-color: #56AB2F;
-    width: 100%;
+    width: 70%;
     padding: 8px;
     box-shadow: 2px 2px #1C6119;
     border-radius: 10px;
@@ -108,7 +108,7 @@ export const BotaoEnviar = styled.TouchableOpacity`
 `
 
 export const TextoBotao = styled.Text`
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     font-family: 'Lexend_300Light';
     color: #FFF;
@@ -128,7 +128,7 @@ export const TextoEmpresa = styled.Image`
 `
 
 export const ContainerGoogle = styled.View`
-    flex: 1;
+    flex: 0.5;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -161,7 +161,7 @@ export const CheckboxContainer = styled.View`
 `
 
 export const TextoCheckbox = styled.Text`
-    font-size: 16px;
+    font-size: 15px;
     font-family: 'Lexend_300Light';
     color: #7A7A7A;
 `

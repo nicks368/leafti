@@ -18,7 +18,16 @@ import { Jura_400Regular } from '@expo-google-fonts/jura';
 import AppLoading from 'expo-app-loading';
 import { Keyboard } from 'react-native';
 
+type AuthResponse = {
+  type: string;
+  params: {
+    access_token: string;
+  }
+}
+  
+
 export default function Cadastro({navigation}) {
+  
   async function handleSignIn() {
     try{
       const CLIENT_ID = '235483201751-qkvaou91qg2i5hbc0ba4ggvv087rd2j9.apps.googleusercontent.com';
@@ -28,18 +37,16 @@ export default function Cadastro({navigation}) {
       
       const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=${SCOPE}`;
       
-      const response = await AuthSession.startAsync({authUrl});
-      console.log(response);
-
-      navigation.navigate('Perfil');
+      const {type, params} = await AuthSession.startAsync({authUrl}) as AuthResponse;
+      
+      if (type == 'success'){
+        navigation.navigate('Profile', {token: params.access_token});
+      }
+  
       
     } catch(error) {
-
         console.log(error);
     }
-
-
-    
   }
   
   const [senha, setSenha]= useState('');
@@ -55,7 +62,7 @@ export default function Cadastro({navigation}) {
 
   //Carrega as fontes antes de iniciar a pagina
   if (!fontsLoaded){
-    <AppLoading />
+    return <AppLoading />
   }
 
   return (
@@ -96,7 +103,7 @@ export default function Cadastro({navigation}) {
 
             <CheckboxContainer>
               <Checkbox
-                style={{width: 15, height: 15, marginLeft: 5, }}
+                style={{width: 17, height: 17, marginLeft: 5}}
                 value={hidePass}
                 onValueChange={setHidepass }
               />

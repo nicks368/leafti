@@ -28,7 +28,7 @@ export default function Login({navigation}) {
   })
   
   if (!fontsLoaded){
-    <AppLoading />
+    return <AppLoading />
   }
 
   return (
@@ -51,6 +51,7 @@ export default function Login({navigation}) {
           
           <CheckboxContainer>
             <Checkbox
+              style={{width: 17, height: 17}}
               value={hidePass}
               onValueChange={setHidepass }
             />
