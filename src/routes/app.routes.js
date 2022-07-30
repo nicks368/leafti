@@ -1,4 +1,6 @@
 import React from 'react';
+import 'react-native-gesture-handler';
+import { getHeaderTitle } from '@react-navigation/elements';
 import { StyleSheet } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
@@ -7,10 +9,11 @@ import LogoHeader from '../components/logo-header';
 import Home from '../screens/home/index';
 import Search from '../screens/search/index';
 import Calendario from '../screens/calendario';
-import Dashboard from '../screens/dashboard';
+import Plantar from '../screens/plantar';
 import MeuStack from './stack.routes';
+import Header from '../components/header';
 
-import { Feather, Ionicons, MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons'
+import { Feather, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons'
 
 
 const Tab = createBottomTabNavigator();
@@ -22,7 +25,10 @@ export default function AppRoutes(){
             screenOptions={{
                 tabBarStyle:{
                     backgroundColor: '#56AB2F',
+                    borderTopWidth: 0,
                     borderTopColor: 'transparent',
+                    borderStartColor: 'transparent',
+                    borderEndColor: 'transparent',
                     borderTopStartRadius: 10,
                     borderTopEndRadius: 10,
                     height: 60,
@@ -30,11 +36,16 @@ export default function AppRoutes(){
                     justifyContent: 'center',
                 },
                 tabBarActiveTintColor: 'blue',
-                headerStyle:{
-                    backgroundColor: '#56AB2F',
-                }, 
-                headerTitleStyle: {
-                    color: 'white',
+                // headerStyle:{
+                //     backgroundColor: '#56AB2F',
+                // }, 
+                // headerTitleStyle: {
+                //     color: 'white',
+                // },
+                header: ({route, options}) => {
+                    const title = getHeaderTitle(options, route.name);
+
+                    return <Header title={title}/>
                 }
             }}
            
@@ -61,7 +72,7 @@ export default function AppRoutes(){
                  options={{
                     tabBarLabel: '',
                     tabBarIcon: ({focused}) => (
-                        <Ionicons name="search" style={estilos.icones} color={focused ? '#1C6119' : '#fff'}/>
+                        <MaterialCommunityIcons name="book" style={estilos.icones} color={focused ? '#1C6119' : '#fff'}/>
                     ),
                     headerLeft: ()=> (
                         <LogoHeader/>
@@ -85,11 +96,11 @@ export default function AppRoutes(){
 
             <Tab.Screen
                  name="Plantar" 
-                 component={Dashboard}
+                 component={Plantar}
                  options={{
                     tabBarLabel: '',
                     tabBarIcon: ({focused}) => (
-                        <MaterialIcons name="dashboard" style={estilos.icones} color={focused ? '#1C6119' : '#fff'}/>
+                        <MaterialCommunityIcons name="tree" style={estilos.icones} color={focused ? '#1C6119' : '#fff'}/>
                     ),
                     headerLeft: ()=> (
                         <LogoHeader/>

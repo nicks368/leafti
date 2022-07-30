@@ -8,7 +8,7 @@ export const Container = styled.View`
 `
 
 export const ContainerPerfil = styled.View`
-    flex: 1.5;
+    flex: 2;
     justify-content: center;
 `
 
@@ -17,6 +17,7 @@ export const FotoPerfil = styled.Image`
     height: 160px;
     border-radius: 100px;
     border: 3px #56AB2F;
+    margin-top: 40px;
 `
 
 export const NomePerfil = styled.Text`
@@ -27,7 +28,7 @@ export const NomePerfil = styled.Text`
 `
 
 export const ContainerBotoes = styled.View`
-    flex: 2;
+    flex: 3;
     justify-content: center;
     align-items: center;
     width: 100%;

@@ -24,18 +24,18 @@ export default function Profile({navigation, route}) {
   
   // const { token } = route.params as Params;
  
-  async function loadProfile(){
+  // async function loadProfile(){
    
-    const response = await fetch(`https://www.googleapis.com/oauth2/v2/userinfo?alt=json&access_token=${token}`);
-    const userInfo = await response.json();
+  //   const response = await fetch(`https://www.googleapis.com/oauth2/v2/userinfo?alt=json&access_token=${token}`);
+  //   const userInfo = await response.json();
       
-    setProfile(userInfo);
+  //   setProfile(userInfo);
    
-  }
+  // }
 
-  useEffect(() =>{
-    loadProfile();
-  }, []);
+  // useEffect(() =>{
+  //   loadProfile();
+  // }, []);
 
   const [fontsLoaded] = useFonts({ 
     Roboto_400Regular,
@@ -47,12 +47,14 @@ export default function Profile({navigation, route}) {
     return <AppLoading />
   }
 
-  
+  //{uri: profile.picture, profile.name}
+
+
   return ( 
     <Container>
       <ContainerPerfil>
-        <FotoPerfil source={{uri: profile.picture}}/>
-        <NomePerfil> {profile.name} </NomePerfil>
+        <FotoPerfil source={ require('../../../assets/imgs/perfildefault.jpg')}/>
+        <NomePerfil> xxxxxxxxx </NomePerfil> 
       </ContainerPerfil>
 
       <ContainerBotoes>
