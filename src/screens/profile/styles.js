@@ -1,15 +1,15 @@
 import styled from "styled-components/native";
-import { StyleSheet } from "react-native";
 
 export const Container = styled.View`
     flex: 1;
-    align-items: center;
-    justify-content: center;
 `
 
 export const ContainerPerfil = styled.View`
-    flex: 2;
+    flex: 0.6;
     justify-content: center;
+    align-items: center;
+    background-color: #B5E59A;
+    width: 100%;
 `
 
 export const FotoPerfil = styled.Image`
@@ -17,7 +17,6 @@ export const FotoPerfil = styled.Image`
     height: 160px;
     border-radius: 100px;
     border: 3px #56AB2F;
-    margin-top: 40px;
 `
 
 export const NomePerfil = styled.Text`

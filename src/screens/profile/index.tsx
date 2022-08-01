@@ -4,6 +4,7 @@ import { BtnOpcao, Container, ContainerBotoes, ContainerPerfil, FotoPerfil, Nome
 import { Roboto_400Regular, Roboto_500Medium } from '@expo-google-fonts/roboto';
 import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading';
+import TopPerfilNavigator from '../../routes/top.perfil.routes.js';
 
 import { Ionicons, Entypo, AntDesign, Feather } from '@expo/vector-icons';
 
@@ -57,39 +58,8 @@ export default function Profile({navigation, route}) {
         <NomePerfil> xxxxxxxxx </NomePerfil> 
       </ContainerPerfil>
 
-      <ContainerBotoes>
-        <BtnOpcao style={{borderLeftWidth: 2, borderLeftColor: '#56AB2F'}}>
-          <Ionicons 
-            name="settings-outline" 
-            style={{fontSize: 30}} 
-            color="#56AB2F" 
-          />
-          <TextBtn> Configurações</TextBtn> 
-        </BtnOpcao>
+      <TopPerfilNavigator />
 
-        <BtnOpcao style={{borderLeftWidth: 2, borderLeftColor: '#56AB2F'}}>
-          <Entypo name="sound-mix" style={{fontSize: 30}} color="#56AB2F" />
-          <TextBtn> Preferências</TextBtn> 
-        </BtnOpcao>
-
-        <BtnOpcao style={{borderLeftWidth: 2, borderLeftColor: '#56AB2F'}}>
-          <AntDesign name="lock1" style={{fontSize: 30}} color="#56AB2F" />
-          <TextBtn> Privacidade</TextBtn> 
-        </BtnOpcao>
-
-        <BtnOpcao style={{borderLeftWidth: 2, borderLeftColor: '#56AB2F'}}>
-          <AntDesign name="questioncircleo" style={{fontSize: 30}} color="#56AB2F" />
-          <TextBtn> Acessibilidade</TextBtn> 
-        </BtnOpcao>
-
-        <BtnOpcao 
-          style={{borderLeftWidth: 2, borderLeftColor: '#56AB2F'}} 
-          onPress={()=> {navigation.navigate('Login')}}
-        >
-        <Feather name="log-in" style={{fontSize: 30}} color="#56AB2F" />
-          <TextBtn> Sair</TextBtn> 
-        </BtnOpcao>
-      </ContainerBotoes>
     </Container>
   );
 }
