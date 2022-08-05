@@ -72,7 +72,7 @@ export const ContainerTextEmp = styled.View`
     text-align: center;
 `
 
-export const TextoEmpresa = styled.Image`
+export const ImgEmpresa = styled.Image`
     width: 112px;
     height: 40px;
     align-self: center;

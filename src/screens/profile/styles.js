@@ -5,7 +5,7 @@ export const Container = styled.View`
 `
 
 export const ContainerPerfil = styled.View`
-    flex: 0.6;
+    flex: 0.7;
     justify-content: center;
     align-items: center;
     background-color: #B5E59A;
@@ -20,10 +20,9 @@ export const FotoPerfil = styled.Image`
 `
 
 export const NomePerfil = styled.Text`
-    font-size: 22px;
+    font-size: 26px;
     text-align: center;
     font-family: 'Roboto_500Medium';
-    margin-top: 10px;
 `
 
 export const ContainerBotoes = styled.View`
@@ -47,4 +46,15 @@ export const TextBtn = styled.Text`
     font-family: 'Roboto_500Medium';
     color: #56AB2F;
     margin-left: 10px;
+`
+
+export const ContainerSair = styled.TouchableOpacity`
+    flex-direction: row;
+    align-items: center;
+`
+
+export const TextoSair = styled.Text`
+    font-size: 18px;
+    color: #535353;
+    font-style: italic;
 `

@@ -7,21 +7,8 @@ import CardPlanta from './components/CardPlanta';
 import PLANTAS from '../../../assets/data/plantas';
 
 import { Entypo } from '@expo/vector-icons'; 
-import { useFonts, Lexend_300Light } from '@expo-google-fonts/lexend';
-import { Roboto_400Regular } from "@expo-google-fonts/roboto";
-import AppLoading from 'expo-app-loading';
 
-export default function Home() {
-  
-  const [fontsLoaded] = useFonts({
-    Lexend_300Light,
-    Roboto_400Regular,
-  })
-  
-  if (!fontsLoaded){
-    return <AppLoading />
-  }
-
+export default function Home({navigation, route}) {
   return (
     <Container>
       
@@ -45,16 +32,28 @@ export default function Home() {
           keyExtractor={(item) => item.id} 
           renderItem = {({item}) => (
             <CardPlanta 
-              imagem={item.imagem}
+              imagem={item.imagemCard}
               nome={item.nome}
-              desc={item.desc}
+              desc={item.descCard}
+              onPress={()=> {navigation.navigate('PerfilPlanta', {
+                img: item.img,
+                nome: item.nome,
+                nomeCien: item.nomeCien,
+                desc: item.desc,
+                nomePopular: item.nomePopular,
+                familia: item.familia,
+                especie: item.especie,
+                luzSolar: item.luzSolar,
+                tamanho: item.tamanho,
+                irrigacao: item.irrigacao,
+                toleranciaCalor: item.toleranciaCalor
+              }
+              )}}
             />
           )}
         />
          
-    
       </ContainerMaisPopulares>
-
     </Container>
   );
 }

@@ -3,9 +3,9 @@ import { Container, DescPlanta, Imagem, NomePlanta } from "./styles";
 import { StyleSheet } from "react-native";
 
 
-export default function CardPlanta({nome, desc, imagem}) {  
+export default function CardPlanta({onPress, nome, desc, imagem}) {  
     return (
-        <Container style={estilo.sombra}>
+        <Container style={estilo.sombra} onPress={onPress}>
             <Imagem source={{uri: `${imagem}`}}/>
             <NomePlanta>{nome}</NomePlanta>
             <DescPlanta>{desc}</DescPlanta>

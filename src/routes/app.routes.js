@@ -6,11 +6,11 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 import LogoHeader from '../components/logo-header';
 
-import Home from '../screens/home/index';
+import StackHome from './stack.home.routes';
 import Search from '../screens/search/index';
 import Calendario from '../screens/calendario';
 import Plantar from '../screens/plantar';
-import MeuStack from './stack.routes';
+import StackPerfil from './stack.perfil.routes';
 import Header from '../components/header';
 
 import { Feather, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons'
@@ -53,8 +53,9 @@ export default function AppRoutes(){
         >
             <Tab.Screen
                 name="Home" 
-                component={Home}
-                options={{
+                component={StackHome}
+                options={({route}) =>({
+                    headerShown: getVisibilidadeHeader(route),
                     tabBarLabel: '',
                     tabBarIcon: ({ focused}) => (
                         <Ionicons name="home" style={estilos.icones} color={focused ? '#1C6119' : '#fff'}/>
@@ -62,7 +63,7 @@ export default function AppRoutes(){
                     headerLeft: ()=> (
                         <LogoHeader/>
                     ),
-                }}
+                })}
             
             />
 
@@ -110,7 +111,7 @@ export default function AppRoutes(){
 
             <Tab.Screen
                 name="Perfil"
-                component={MeuStack}
+                component={StackPerfil}
                 options={({route}) => ({
                     headerShown: getVisibilidadeHeader(route),
                     tabBarStyle: {
@@ -152,7 +153,7 @@ const getVisibilidadeHeader = route => {
   const routeName = getFocusedRouteNameFromRoute(route) ?? 'Feed';
   // console.log(routeName);
 
-  if( routeName == 'Login' || routeName == 'Cadastro' ) {
+  if( routeName == 'Login' || routeName == 'Cadastro' || routeName == 'PerfilPlanta') {
     return false;
   }
   return true;

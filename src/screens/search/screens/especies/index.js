@@ -14,9 +14,9 @@ export default function Especies(){
           keyExtractor={(item) => item.id} 
           renderItem = {({item}) => (
             <CardEspecies 
-              imagem={item.imagem}
+              imagem={item.imagemCard}
               nome={item.nome}
-              desc={item.desc}
+              desc={item.descCard}
             />
           )}
         />
@@ -28,9 +28,9 @@ export default function Especies(){
           keyExtractor={(item) => item.id} 
           renderItem = {({item}) => (
             <CardEspecies 
-              imagem={item.imagem}
+              imagem={item.imagemCard}
               nome={item.nome}
-              desc={item.desc}
+              desc={item.descCard}
             />
           )}
         />

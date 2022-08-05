@@ -1,12 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import { BtnOpcao, Container, ContainerBotoes, ContainerPerfil, FotoPerfil, NomePerfil, TextBtn } from './styles.js';
+import { Container, ContainerPerfil, ContainerSair, FotoPerfil, NomePerfil, TextoSair } from './styles.js';
 
-import { Roboto_400Regular, Roboto_500Medium } from '@expo-google-fonts/roboto';
-import { useFonts } from 'expo-font';
-import AppLoading from 'expo-app-loading';
 import TopPerfilNavigator from '../../routes/top.perfil.routes.js';
 
-import { Ionicons, Entypo, AntDesign, Feather } from '@expo/vector-icons';
+import { Feather } from '@expo/vector-icons';
 
 type Params = {
   token: string;
@@ -38,17 +35,8 @@ export default function Profile({navigation, route}) {
   //   loadProfile();
   // }, []);
 
-  const [fontsLoaded] = useFonts({ 
-    Roboto_400Regular,
-    Roboto_500Medium
-  });
 
-  //Carrega as fontes antes de iniciar a pagina
-  if (!fontsLoaded){
-    return <AppLoading />
-  }
-
-  //{uri: profile.picture, profile.name}
+  //{uri: profile.picture, profile.name} -> coisa pras info do perfil
 
 
   return ( 
@@ -56,6 +44,10 @@ export default function Profile({navigation, route}) {
       <ContainerPerfil>
         <FotoPerfil source={ require('../../../assets/imgs/perfildefault.jpg')}/>
         <NomePerfil> xxxxxxxxx </NomePerfil> 
+        <ContainerSair onPress={()=> {navigation.navigate('Login')}}>
+          <Feather name="log-out" style={{fontSize: 16}} color="#535353" />
+          <TextoSair>Sair</TextoSair>
+        </ContainerSair>
       </ContainerPerfil>
 
       <TopPerfilNavigator />

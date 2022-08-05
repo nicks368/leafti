@@ -12,10 +12,6 @@ import {
 } from './styles';
 
 import LogoCadastro from '../../components/logo-cadastro';
-import { useFonts, Lexend_300Light } from '@expo-google-fonts/lexend';
-import { Roboto_400Regular } from '@expo-google-fonts/roboto';
-import { Jura_400Regular } from '@expo-google-fonts/jura';
-import AppLoading from 'expo-app-loading';
 import { Keyboard } from 'react-native';
 
 type AuthResponse = {
@@ -52,18 +48,6 @@ export default function Cadastro({navigation}) {
   const [senha, setSenha]= useState('');
   const [confSenha, setConfSenha]= useState('');
   const [hidePass, setHidepass]= useState(false);
-  
-  const [ fontsLoaded]  = useFonts({
-    Jura_400Regular,
-    Lexend_300Light,
-    Roboto_400Regular,
-    'agency_fb':require('../../../assets/fonts/agency_fb.ttf')
-  })
-
-  //Carrega as fontes antes de iniciar a pagina
-  if (!fontsLoaded){
-    return <AppLoading />
-  }
 
   return (
     <DismissKeyboard onPress={() =>Keyboard.dismiss()}>

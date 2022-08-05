@@ -19,9 +19,9 @@ export default function Populares(){
           keyExtractor={(item) => item.id} 
           renderItem = {({item}) => (
             <CardPopulares 
-              imagem={item.imagem}
+              imagem={item.imagemCard}
               nome={item.nome}
-              desc={item.desc}
+              desc={item.descCard}
             />
           )}
         />

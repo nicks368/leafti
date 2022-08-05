@@ -7,7 +7,7 @@ import Cadastro from "../screens/cadastro";
 
 const Stack = createNativeStackNavigator();
 
-export default function MeuStack() {
+export default function StackPerfil() {
     return (
         <Stack.Navigator>
             <Stack.Screen name="Profile" component={Profile} options={{headerShown: false}} />

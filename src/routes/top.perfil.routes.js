@@ -10,6 +10,7 @@ import Sobre from "../screens/profile/screens/sobre";
 
 import AppLoading from "expo-app-loading";
 import {Roboto_700Bold, Roboto_400Regular, useFonts } from "@expo-google-fonts/roboto";
+import { color } from "react-native-reanimated";
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -36,9 +37,14 @@ export default function TopPerfilNavigator(){
                     fontFamily: 'Roboto_700Bold',
                 }, 
                 tabBarScrollEnabled: true,
+                tabBarPressColor: '#E6E6E6'
             }}
             >
-            <Tab.Screen name="configurações" component={Configuracoes}/>
+            <Tab.Screen name="configurações" component={Configuracoes} 
+                options={{
+                    
+                }} 
+            />
             <Tab.Screen name="privacidade" component={Privacidade} />
             <Tab.Screen name="ajuda" component={Ajuda} />
             <Tab.Screen name="sobre" component={Sobre} />

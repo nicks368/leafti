@@ -4,7 +4,7 @@ import { Container, TituloEspecie } from "./style";
 export default function Familia(){
    return( 
     <Container>
-        <TituloEspecie>Florais</TituloEspecie>
+        <TituloEspecie>Configurações</TituloEspecie>
     </Container>
    );
 }

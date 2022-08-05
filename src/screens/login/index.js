@@ -4,32 +4,17 @@ import { Keyboard } from 'react-native';
 
 import { 
   Titulo, Input, BotaoEnviar,
-  TextoBotao, TextLink, TextoEmpresa, 
+  TextoBotao, TextLink, ImgEmpresa, 
   ContainerTextEmp, ContainerForm, ContainerLogo,
   Container, ContainerGoogle, BtnGoogle, TextGoogle,
   IconGoogle, CheckboxContainer, TextoCheckbox, DismissKeyboard
 } from './styles';
 
 import LogoLogin from '../../components/logo-login';
-import { useFonts, Lexend_300Light } from '@expo-google-fonts/lexend';
-import { Roboto_400Regular } from '@expo-google-fonts/roboto';
-import { Jura_400Regular } from '@expo-google-fonts/jura';
-import AppLoading from 'expo-app-loading';
 
 export default function Login({navigation}) {
   const [senha, setSenha]= useState('');
   const [hidePass, setHidepass]= useState(false);
-
-  const [ fontsLoaded]  = useFonts({
-    Jura_400Regular,
-    Lexend_300Light,
-    Roboto_400Regular,
-    'agency_fb':require('../../../assets/fonts/agency_fb.ttf')
-  })
-  
-  if (!fontsLoaded){
-    return <AppLoading />
-  }
 
   return (
     <DismissKeyboard onPress={()=> Keyboard.dismiss()}>
@@ -80,7 +65,7 @@ export default function Login({navigation}) {
         </ContainerGoogle>
 
         <ContainerTextEmp>
-          <TextoEmpresa source={require('../../../assets/imgs/slogan.png')}/>
+          <ImgEmpresa source={require('../../../assets/imgs/slogan.png')}/>
         </ContainerTextEmp>
 
       </Container>
