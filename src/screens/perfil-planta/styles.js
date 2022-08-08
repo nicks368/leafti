@@ -1,11 +1,15 @@
 import styled from "styled-components/native";
 
-export const Container = styled.ScrollView`
+export const ContainerScroll = styled.ScrollView`
+
+`
+
+export const Container = styled.View`
     flex: 1;
 `
 
 export const ContainerImagem = styled.View`
-    height: 300px;
+    height: 280px;
     align-items: center;
     justify-content: center;
 `
@@ -34,7 +38,7 @@ export const TextoNomeCien = styled.Text`
 `
 
 export const ContainerDesc = styled.View`
-    flex: 1;
+    height: 200px;
     padding: 20px;
     padding-top: 0;
 `
@@ -47,9 +51,10 @@ export const TextoDesc = styled.Text`
 `
 
 export const ContainerInfos = styled.View`
-    flex: 1;
+    flex: 2;
     padding: 20px;
     padding-top: 0;
+    
 `
 
 export const SectionInfo = styled.View`

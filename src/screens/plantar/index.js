@@ -10,7 +10,7 @@ export default function Dashboard() {
   return (
     <Container>
       <ContainerIntro>
-        <Titulo>Onde Plantar</Titulo>
+        <Titulo>Primeiros Passos</Titulo>
 
         <Texto>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut maximus quam. 

@@ -4,7 +4,7 @@ import 'react-native-gesture-handler';
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 
 import Populares from "../screens/search/screens/populares";
-import Especies from "../screens/search/screens/especies";
+import Categorias from "../screens/search/screens/categorias";
 import Familia from "../screens/search/screens/familia";
 
 import AppLoading from "expo-app-loading";
@@ -38,7 +38,7 @@ export default function TopNavigator(){
             }}
             >
             <Tab.Screen name="populares" component={Populares}/>
-            <Tab.Screen name="espécies" component={Especies} />
+            <Tab.Screen name="categorias" component={Categorias} />
             <Tab.Screen name="família" component={Familia} />
         </Tab.Navigator>
     );

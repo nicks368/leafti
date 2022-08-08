@@ -16,15 +16,16 @@ export const Imagem = styled.Image`
 `
 
 export const NomePlanta = styled.Text`
-    font-size: 20px;
+    font-size: 18px;
     font-family: 'Roboto_400Regular';
     color: #56AB2F;
     text-transform: uppercase;
     font-weight: bold;
+    margin-bottom: 5px;
 `
 
 export const DescPlanta = styled.Text`
-    font-size: 16px;
+    font-size: 14px;
     font-family: 'Roboto_400Regular';
     color: #656565;
 `

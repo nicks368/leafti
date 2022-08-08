@@ -1,12 +1,12 @@
 import React from "react";
-import { Container, ContainerDesc, ContainerImagem, ContainerInfos, ImgPlanta, SectionInfo, TextoDesc, TextoInfo, TextoNome, TextoNomeCien, TextoTitulo} from "./styles";
+import { Container, ContainerDesc, ContainerImagem, ContainerInfos, ContainerScroll, ImgPlanta, SectionInfo, TextoDesc, TextoInfo, TextoNome, TextoNomeCien, TextoTitulo} from "./styles";
 import { LinearGradient } from "expo-linear-gradient";
 
 export default function PerfilPlanta({route}){
     const {img, nome, nomeCien, desc, nomePopular, familia, especie, luzSolar, tamanho, irrigacao, toleranciaCalor} = route.params;
 
     return(
-        <Container>
+        <ContainerScroll contentContainerStyle={{flex: 1, }}>
             <LinearGradient colors={['#B5E59A', 'transparent']} start={{x: 1, y: 0}} end={{x: 1, y: 1}} locations={[0.5, 0.5]}>
                 <ContainerImagem>
                     <ImgPlanta source={{uri: `${img}`}} />
@@ -57,6 +57,6 @@ export default function PerfilPlanta({route}){
                     <TextoInfo>{toleranciaCalor}</TextoInfo>
                 </SectionInfo>             
             </ContainerInfos>
-        </Container>
+        </ContainerScroll>
     );
 }

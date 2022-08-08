@@ -30,7 +30,7 @@ const estilos = StyleSheet.create({
         flexDirection: 'row',
         padding: 15,
         height: 100, //100 pra fica show no android e 70 na web
-        paddingTop: 50
+        paddingTop: 50 //statusbar.currentHeight
     },
 
     logo: {

@@ -1,10 +1,10 @@
 import React from "react";
 import { FlatList} from "react-native";
-import { Container, ContainerFlat, TituloEspecie } from "./style";
+import { Container, TituloEspecie } from "./style";
 import PLANTAS from "../../../../../assets/data/plantas";
 import CardEspecies from "../../components/CardEspecies";
 
-export default function Especies(){
+export default function Categorias(){
    return( 
     <Container>
         <TituloEspecie>Florais</TituloEspecie>
