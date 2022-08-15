@@ -1,6 +1,6 @@
 import React from 'react';
-import {FlatList} from 'react-native';
-import { Container, ContainerIntro, ContainerOng, Texto, Titulo } from './styles';
+import {FlatList, Linking} from 'react-native';
+import { Container, ContainerIntro, ContainerOng, Texto, Titulo, TituloOng } from './styles';
 import ONGS from '../../../assets/data/ongs';
 
 import CardOng from './components/CardOng';
@@ -16,6 +16,8 @@ export default function Dashboard() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut maximus quam. 
           Etiam scelerisque bibendum gravida. In maximus dictum ligula, nec commodo tortor posuere eu.
         </Texto>
+
+        <TituloOng>ONG'S</TituloOng>
       </ContainerIntro>
 
       <ContainerOng>
@@ -28,6 +30,8 @@ export default function Dashboard() {
               imagem={item.imagem}
               nome={item.nome}
               desc={item.desc}
+              descCard={item.descCard}
+              onPress={() => {Linking.openURL(`${item.link}`)}}
             />
           )}
         />

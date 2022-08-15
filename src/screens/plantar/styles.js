@@ -5,13 +5,14 @@ export const Container = styled.View`
 `
 
 export const ContainerIntro = styled.View`
-    flex: 1;
     padding: 20px;
+    padding-bottom: 0;
 `
 
 export const Titulo = styled.Text`
     font-size: 30px;
-    color: #6AA668;
+    color: #1C6119;
+    font-weight: bold;
     font-family: 'Lexend_300Light';
     margin-bottom: 10px;
 `
@@ -26,4 +27,13 @@ export const Texto = styled.Text`
 export const ContainerOng = styled.View`
     flex: 2;
 
+`
+
+export const TituloOng = styled.Text`
+    font-size: 30px;
+    color: #1C6119;
+    font-weight: bold;
+    font-family: 'Lexend_300Light';
+    margin-bottom: 10px;
+    margin-top: 10px;
 `
