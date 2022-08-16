@@ -17,7 +17,7 @@ export const ContainerLogo = styled.View`
 `
 
 export const ContainerForm = styled.View`
-    flex: 2;
+    flex: 3;
     width: 70%;
 `
 

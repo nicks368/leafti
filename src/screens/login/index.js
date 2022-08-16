@@ -65,7 +65,7 @@ export default function Login({navigation}) {
         </ContainerGoogle>
 
         <ContainerTextEmp>
-          <ImgEmpresa source={require('../../../assets/imgs/slogan.png')}/>
+          <ImgEmpresa source={require('../../../assets/imgs/Slogan.png')}/>
         </ContainerTextEmp>
 
       </Container>

@@ -28,6 +28,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
+      "softwareKeyboardLayoutMode": "pan",
       "package": "com.nicks368.leafti"
     },
     "web": {
