@@ -1,6 +1,6 @@
 import React from 'react';
 import { Titulo, Container, ContainerSuasPlantas, ContainerMaisPopulares,
-   TextoFundo } from './styles';
+  TextoFundo, } from './styles';
   
 import { FlatList } from 'react-native';
 import CardPlanta from './components/CardPlanta';
@@ -13,6 +13,7 @@ export default function Home({navigation, route}) {
     <Container>
       
       <Titulo> Suas Plantas</Titulo>
+      
       <ContainerSuasPlantas> 
         <Entypo name="flower" style={{fontSize: 45}} color="#9C9C9C" />
         <TextoFundo> Nenhuma planta adicionada :( </TextoFundo>

@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, SafeAreaView, StyleSheet, Image, Text } from 'react-native';
+import {View, SafeAreaView, StyleSheet, Image, Text, StatusBar } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
 export default function Header({title}) {
@@ -9,6 +9,7 @@ export default function Header({title}) {
         colors={['#56AB2F', '#7CC447', '#99CB5B']} 
         start={{x: 0, y: 0}}
         end={{x: 1, y: 0.1}}
+        style={{paddingTop: StatusBar.currentHeight}}
     >
       
         <View style={estilos.header}>
@@ -29,8 +30,7 @@ const estilos = StyleSheet.create({
         alignItems: 'center',
         flexDirection: 'row',
         padding: 15,
-        height: 70, //100 pra fica show no android e 70 na web
-        paddingTop: 20 //statusbar.currentHeight
+        height: 65, //100 pra fica show no android e 70 na web
     },
 
     logo: {

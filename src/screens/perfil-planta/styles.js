@@ -1,7 +1,7 @@
 import styled from "styled-components/native";
 
 export const ContainerScroll = styled.ScrollView`
-
+    flex: 1;
 `
 
 export const Container = styled.View`
@@ -44,7 +44,7 @@ export const ContainerDesc = styled.View`
 `
 
 export const TextoDesc = styled.Text`
-    color: #1C6119;
+    color: #4C4C4C;
     font-size: 16px;
     font-family: 'Roboto_400Regular';
     text-align: justify;
@@ -74,4 +74,13 @@ export const TextoInfo = styled.Text`
     font-size: 16px;
     font-family: 'Roboto_300Light';
     font-style: italic;
+`
+
+export const TextoAdicionar = styled.Text`
+    margin-top: 20px;
+    color: #5B3932;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Roboto_400Regular';
+    text-align: center;
 `

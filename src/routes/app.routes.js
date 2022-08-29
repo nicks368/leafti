@@ -153,7 +153,7 @@ const getVisibilidadeHeader = route => {
   const routeName = getFocusedRouteNameFromRoute(route) ?? 'Feed';
   // console.log(routeName);
 
-  if( routeName == 'Login' || routeName == 'Cadastro' || routeName == 'PerfilPlanta') {
+  if( routeName == 'Login' || routeName == 'Cadastro' || routeName == 'PerfilPlanta' || routeName == 'Formulário') {
     return false;
   }
   return true;
