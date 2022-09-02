@@ -36,7 +36,7 @@ export default function Cadastro({navigation}) {
       const {type, params} = await AuthSession.startAsync({authUrl}) as AuthResponse;
       
       if (type == 'success'){
-        navigation.navigate('Profile', {token: params.access_token});
+        navigation.navigate('Profile', {token: params.access_token}); //adicionar o ? antes do params
       }
   
       
@@ -114,7 +114,7 @@ export default function Cadastro({navigation}) {
       </ContainerGoogle>
 
       <ContainerTextEmp> 
-        <TextoEmpresa source={require('../../../assets/imgs/Slogan.png')}/>
+        <TextoEmpresa source={require('../../../assets/imgs/slogan.png')}/>
       </ContainerTextEmp>
       
     </Container>

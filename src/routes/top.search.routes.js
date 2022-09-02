@@ -6,6 +6,7 @@ import { createMaterialTopTabNavigator } from "@react-navigation/material-top-ta
 import Populares from "../screens/search/screens/populares";
 import Categorias from "../screens/search/screens/categorias";
 import Familia from "../screens/search/screens/familia";
+import Todas from "../screens/search/screens/todas";
 
 import AppLoading from "expo-app-loading";
 import {Roboto_700Bold, Roboto_400Regular, useFonts } from "@expo-google-fonts/roboto";
@@ -37,6 +38,7 @@ export default function TopNavigator(){
                 tabBarScrollEnabled: true,
             }}
             >
+            <Tab.Screen name="todas" component={Todas} />
             <Tab.Screen name="populares" component={Populares}/>
             <Tab.Screen name="categorias" component={Categorias} />
             <Tab.Screen name="família" component={Familia} />

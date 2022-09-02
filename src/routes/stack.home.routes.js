@@ -14,7 +14,7 @@ export default function StackHome() {
                 name="PerfilPlanta" 
                 component={PerfilPlanta} 
                 options={({route})=> ({
-                    title: route.params.nome,
+                    title: route.params.nome.toUpperCase(),
                     headerStyle:{
                         backgroundColor: '#56AB2F',
                     },

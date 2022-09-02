@@ -27,7 +27,7 @@ export const TextoNome = styled.Text`
     font-size: 25px;
     font-family: 'Roboto_400Regular';
     font-weight: bold;
-    
+    text-transform: capitalize;
 `
 
 export const TextoNomeCien = styled.Text`
@@ -35,10 +35,10 @@ export const TextoNomeCien = styled.Text`
     font-size: 16px;
     font-family: 'Roboto_300Light';
     font-style: italic;
+    text-transform: capitalize;
 `
 
 export const ContainerDesc = styled.View`
-    height: 200px;
     padding: 20px;
     padding-top: 0;
 `
@@ -51,10 +51,7 @@ export const TextoDesc = styled.Text`
 `
 
 export const ContainerInfos = styled.View`
-    flex: 2;
     padding: 20px;
-    padding-top: 0;
-    
 `
 
 export const SectionInfo = styled.View`

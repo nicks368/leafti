@@ -1,14 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Titulo, Container, ContainerSuasPlantas, ContainerMaisPopulares,
   TextoFundo, } from './styles';
   
-import { FlatList } from 'react-native';
+import { FlatList, View } from 'react-native';
 import CardPlanta from './components/CardPlanta';
 import PLANTAS from '../../../assets/data/plantas';
 
 import { Entypo } from '@expo/vector-icons'; 
 
 export default function Home({navigation, route}) {
+
+  function Card(item){
+    return(
+      <CardPlanta
+      imagem={item.imagemCard}
+      nome={item.nome}
+      desc={item.descCard}
+      onPress={()=> {navigation.navigate('PerfilPlanta', {
+        img: item.img,
+        nome: item.nome,
+        nomeCien: item.nomeCien,
+        desc: item.desc,
+        nomePopular: item.nomePopular,
+        familia: item.familia,
+        especie: item.especie,
+        luzSolar: item.luzSolar,
+        tamanho: item.tamanho,
+        irrigacao: item.irrigacao,
+        toleranciaCalor: item.toleranciaCalor
+      }
+      )}}
+      />
+    );
+  }
+
   return (
     <Container>
       
@@ -31,31 +56,10 @@ export default function Home({navigation, route}) {
           horizontal= {false} 
           data={PLANTAS} 
           keyExtractor={(item) => item.id} 
-          renderItem = {({item}) => (
-            <CardPlanta 
-              imagem={item.imagemCard}
-              nome={item.nome}
-              desc={item.descCard}
-              onPress={()=> {navigation.navigate('PerfilPlanta', {
-                img: item.img,
-                nome: item.nome,
-                nomeCien: item.nomeCien,
-                desc: item.desc,
-                nomePopular: item.nomePopular,
-                familia: item.familia,
-                especie: item.especie,
-                luzSolar: item.luzSolar,
-                tamanho: item.tamanho,
-                irrigacao: item.irrigacao,
-                toleranciaCalor: item.toleranciaCalor
-              }
-              )}}
-            />
-          )}
+          renderItem = {({item}) => (Card(item))}
         />
          
       </ContainerMaisPopulares>
     </Container>
   );
 }
-
