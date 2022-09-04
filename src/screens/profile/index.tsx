@@ -19,31 +19,30 @@ type Profile = {
 
 export default function Profile({navigation, route}) {
   const [profile, setProfile] = useState({} as Profile);
-  
-  // const { token } = route.params as Params;
+
+      var { token } = route.params as Params;
  
-  // async function loadProfile(){
-   
-  //   const response = await fetch(`https://www.googleapis.com/oauth2/v2/userinfo?alt=json&access_token=${token}`);
-  //   const userInfo = await response.json();
+      async function loadProfile(){
       
-  //   setProfile(userInfo);
-   
-  // }
+      const response = await fetch(`https:www.googleapis.com/oauth2/v2/userinfo?alt=json&access_token=${token}`);
+      const userInfo = await response.json();
+      
+      setProfile(userInfo);
+    
+     }
 
-  // useEffect(() =>{
-  //   loadProfile();
-  // }, []);
+     useEffect(() =>{
+       loadProfile();
+     }, []);
 
 
-  //{uri: profile.picture, profile.name} -> coisa pras info do perfil
-
+     // require('../../../assets/imgs/perfildefault.jpg')
 
   return ( 
     <Container>
       <ContainerPerfil>
-        <FotoPerfil source={ require('../../../assets/imgs/perfildefault.jpg')}/>
-        <NomePerfil> xxxxxxxxx </NomePerfil> 
+        <FotoPerfil source={(profile.picture? {uri: profile.picture} : require('../../../assets/imgs/perfildefault.jpg'))}/>
+        <NomePerfil>{ (profile.name? profile.name : 'xxxxxxxx')} </NomePerfil> 
         <ContainerSair onPress={()=> {navigation.navigate('Login')}}>
           <Feather name="log-out" style={{fontSize: 16}} color="#535353" />
           <TextoSair>Sair</TextoSair>

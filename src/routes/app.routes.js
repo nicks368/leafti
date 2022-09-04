@@ -9,7 +9,7 @@ import LogoHeader from '../components/logo-header';
 import StackHome from './stack.home.routes';
 import Search from '../screens/search/index';
 import Calendario from '../screens/calendario';
-import Plantar from '../screens/plantar';
+import StackOngs from './stack.ong.routes';
 import StackPerfil from './stack.perfil.routes';
 import Header from '../components/header';
 
@@ -96,17 +96,17 @@ export default function AppRoutes(){
             />
 
             <Tab.Screen
-                 name="Plantar" 
-                 component={Plantar}
-                 options={{
+                 name="Ongs" 
+                 component={StackOngs}
+                 options={({route})=> ({
                     tabBarLabel: '',
                     tabBarIcon: ({focused}) => (
                         <MaterialCommunityIcons name="tree" style={estilos.icones} color={focused ? '#1C6119' : '#fff'}/>
                     ),
                     headerLeft: ()=> (
                         <LogoHeader/>
-                    ),  
-                 }}
+                    ), 
+                })}
             />
 
             <Tab.Screen

@@ -5,7 +5,7 @@ import ONGS from '../../../assets/data/ongs';
 
 import CardOng from './components/CardOng';
 
-export default function Dashboard() {
+export default function Ongs() {
   
   return (
     <Container>
