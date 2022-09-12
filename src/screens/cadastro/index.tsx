@@ -114,7 +114,7 @@ export default function Cadastro({navigation}) {
       </ContainerGoogle>
 
       <ContainerTextEmp> 
-        <TextoEmpresa source={require('../../../assets/imgs/slogan.png')}/>
+        <TextoEmpresa source={require('../../../assets/imgs/Slogan.png')}/>
       </ContainerTextEmp>
       
     </Container>

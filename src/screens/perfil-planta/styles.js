@@ -16,7 +16,8 @@ export const ContainerImagem = styled.View`
 
 export const ImgPlanta = styled.Image`
     border-radius: 100px;
-    border: 4px #FFF;
+    border-width: 4px;
+    border-color: #fff;
     margin-top: 50px;
     width: 150px;
     height: 150px;
@@ -36,6 +37,29 @@ export const TextoNomeCien = styled.Text`
     font-family: 'Roboto_300Light';
     font-style: italic;
     text-transform: capitalize;
+`
+
+export const ContainerNomesPopulares = styled.Text`
+    flex: 1;
+    padding: 20px;
+    padding-top: 0;
+    padding-bottom: 10px;
+`
+
+export const TextoNomes = styled.Text`
+    font-size: 16px;
+    text-decoration: underline;
+    color: #4C4C4C;
+    font-weight: bold;
+    font-family: 'Roboto_400Regular';
+    text-align: justify;
+`
+
+export const TituloNomes = styled.Text`
+    font-weight: bold;
+    font-family: 'Roboto_400Regular';
+    font-size: 16px;
+    color: #1C6119;
 `
 
 export const ContainerDesc = styled.View`

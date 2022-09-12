@@ -5,12 +5,10 @@ import { createMaterialTopTabNavigator } from "@react-navigation/material-top-ta
 
 import Ajuda from "../screens/profile/screens/ajuda";
 import Configuracoes from "../screens/profile/screens/configurations";
-import Privacidade from "../screens/profile/screens/privacidade";
 import Sobre from "../screens/profile/screens/sobre";
 
 import AppLoading from "expo-app-loading";
 import {Roboto_700Bold, Roboto_400Regular, useFonts } from "@expo-google-fonts/roboto";
-import { color } from "react-native-reanimated";
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -45,7 +43,6 @@ export default function TopPerfilNavigator(){
                     
                 }} 
             />
-            <Tab.Screen name="privacidade" component={Privacidade} />
             <Tab.Screen name="ajuda" component={Ajuda} />
             <Tab.Screen name="sobre" component={Sobre} />
         </Tab.Navigator>

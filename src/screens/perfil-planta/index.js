@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, ContainerDesc, ContainerImagem, ContainerInfos, ContainerScroll, ImgPlanta, SectionInfo, TextoAdicionar, TextoDesc, TextoInfo, TextoNome, TextoNomeCien, TextoTitulo} from "./styles";
+import { Container, ContainerDesc, ContainerImagem, ContainerInfos, ContainerNomesPopulares, ContainerScroll, ImgPlanta, SectionInfo, TextoAdicionar, TextoDesc, TextoInfo, TextoNome, TextoNomeCien, TextoNomes, TextoTitulo, TituloNomes} from "./styles";
 import { LinearGradient } from "expo-linear-gradient";
 
 export default function PerfilPlanta({route}){
@@ -15,6 +15,13 @@ export default function PerfilPlanta({route}){
                 </ContainerImagem>           
             </LinearGradient>
 
+            <ContainerNomesPopulares>
+                <TituloNomes>Nomes Populares:  </TituloNomes>
+                <TextoNomes>
+                   {nomePopular}
+                </TextoNomes>
+            </ContainerNomesPopulares>
+
             <ContainerDesc>
                 <TextoDesc>
                     {desc}
@@ -24,11 +31,6 @@ export default function PerfilPlanta({route}){
             </ContainerDesc>
 
             <ContainerInfos>
-                <SectionInfo>
-                    <TextoTitulo>Nomes Populares:</TextoTitulo>
-                    <TextoInfo>{nomePopular}</TextoInfo>
-                </SectionInfo>
-                
                 <SectionInfo>
                     <TextoTitulo>Família:</TextoTitulo>
                     <TextoInfo>{familia}</TextoInfo>
