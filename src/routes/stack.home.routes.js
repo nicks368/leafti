@@ -1,8 +1,9 @@
 import 'react-native-gesture-handler';
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { CommonActions } from '@react-navigation/native';
 import Home from '../screens/home';
 import PerfilPlanta from '../screens/perfil-planta';
-
+import HeaderPlanta from '../components/header-planta';
 
 const Stack = createNativeStackNavigator();
 
@@ -13,18 +14,14 @@ export default function StackHome() {
             <Stack.Screen 
                 name="PerfilPlanta" 
                 component={PerfilPlanta} 
-                options={({route})=> ({
+                options={({route, navigation})=> ({
                     title: route.params.nome.toUpperCase(),
-                    headerStyle:{
-                        backgroundColor: '#56AB2F',
-                    },
-                    headerTitleStyle:{
-                        color: '#fff',
-                    },
-                    headerTintColor: '#fff',
+                    header: ({route}) => {
+                        return <HeaderPlanta title={route.params.nome.toUpperCase()} navigation={()=> {navigation.dispatch(CommonActions.goBack());}}/>
+                    }
                 })}
             />
             
         </Stack.Navigator>
-    )
+    ) 
 } 

@@ -6,6 +6,7 @@ export const Container = styled.View`
     justify-content: center;
 `
 
-export const TituloEspecie = styled.Text`
-    font-size: 26px;
+export const TextoSobre = styled.Text`
+    font-size: 16px;
+    text-align: justify;
 `

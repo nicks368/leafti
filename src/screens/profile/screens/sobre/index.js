@@ -1,10 +1,10 @@
 import React from "react";
-import { Container, TituloEspecie } from "./style";
+import { Container, TextoSobre, TituloEspecie } from "./style";
 
 export default function Sobre(){
    return( 
     <Container>
-        <TituloEspecie>Sobre</TituloEspecie>
+        <TextoSobre>Somos uma empresa fictícia criada para desenvolver nosso trabalho de conclusão de curso </TextoSobre>
     </Container>
    );
 }

@@ -13,8 +13,7 @@ export default function Ongs() {
         <Titulo>Primeiros Passos</Titulo>
 
         <Texto>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut maximus quam. 
-          Etiam scelerisque bibendum gravida. In maximus dictum ligula, nec commodo tortor posuere eu.
+          Está buscando algo a mais para fazer pelo meio ambiente? Conheça algumas ONGs que podem ajudar neste processo.
         </Texto>
 
         <TituloOng>ONG'S</TituloOng>
