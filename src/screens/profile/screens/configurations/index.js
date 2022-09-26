@@ -1,10 +1,18 @@
 import React from "react";
-import { Container, TituloEspecie } from "./style";
+import { Container, ContainerOpcoes, Titulo, TituloConfig } from "./style";
 
 export default function Familia(){
    return( 
     <Container>
-        <TituloEspecie>Configurações</TituloEspecie>
+        <ContainerOpcoes>
+            <TituloConfig>E-mail:</TituloConfig>
+            <Titulo>email@email.com</Titulo>
+        </ContainerOpcoes>
+        
+        <ContainerOpcoes>
+            <TituloConfig>Senha:</TituloConfig>
+            <Titulo>*************</Titulo>
+        </ContainerOpcoes>
     </Container>
    );
 }
