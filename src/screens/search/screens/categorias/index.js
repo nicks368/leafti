@@ -17,6 +17,7 @@ export default function Categorias(){
               imagem={item.imagemCard}
               nome={item.nome}
               desc={item.descCard}
+              item={item}
             />
           )}
         />
@@ -31,6 +32,7 @@ export default function Categorias(){
               imagem={item.imagemCard}
               nome={item.nome}
               desc={item.descCard}
+              item={item}
             />
           )}
         />

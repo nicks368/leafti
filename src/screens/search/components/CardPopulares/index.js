@@ -1,14 +1,21 @@
 import React from "react";
-import { Container, DescPlanta, Imagem, NomePlanta } from "./styles";
+import { Container, DescPlanta, Imagem, NomePlanta, BotaoFav } from "./styles";
 import { StyleSheet } from "react-native";
+import { useFavoritos } from "../../../../context/favoritos";
+import { Ionicons } from '@expo/vector-icons';
 
-
-export default function CardPlanta({onPress, nome, desc, imagem}) {  
+export default function CardPlanta({onPress, nome, desc, imagem, item}) {  
+    
+    const {add} = useFavoritos()
+    
     return (
         <Container style={estilo.sombra} onPress={onPress}>
             <Imagem source={{uri: `${imagem}`}}/>
             <NomePlanta>{nome}</NomePlanta>
             <DescPlanta>{desc}</DescPlanta>
+            <BotaoFav onPress={()=> add(item)}>
+              <Ionicons name="heart" size={24} color="#FF3F3F" />
+            </BotaoFav>
         </Container>
     );
 

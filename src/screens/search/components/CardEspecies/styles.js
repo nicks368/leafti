@@ -3,7 +3,7 @@ import styled from "styled-components/native";
 export const Container = styled.TouchableOpacity`
     background-color: white;
     width: 260px;
-    height: 200px;
+    height: 230px;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 15px;
@@ -30,4 +30,12 @@ export const DescPlanta = styled.Text`
     font-size: 14px;
     font-family: 'Roboto_400Regular';
     color: #000;
+`
+
+export const BotaoFav = styled.TouchableOpacity`
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    align-self: flex-end;
+    padding: 0;
 `

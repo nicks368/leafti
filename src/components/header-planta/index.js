@@ -19,8 +19,8 @@ const estilos = StyleSheet.create({
         alignItems: 'center',
         flexDirection: 'row',
         padding: 15,
-        paddingTop: 0,
-        height: 70, //100 pra fica show no android e 70 na web
+        paddingTop: 10,
+        height: 90, //100 pra fica show no android e 70 na web
     },
 
     logo: {

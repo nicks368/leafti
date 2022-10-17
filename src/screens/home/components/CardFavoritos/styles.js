@@ -2,11 +2,13 @@ import styled from "styled-components/native";
 
 export const Container = styled.TouchableOpacity`
     background-color: white;
-    width: 45%;
+    width: 260px;
+    height: 215px;
     padding: 20px;
-    padding-bottom: 10px;
     margin-bottom: 20px;
     border-radius: 15px;
+    margin-top: 20px;
+    margin-left: 20px;
 `
 
 export const Imagem = styled.Image`
@@ -22,13 +24,12 @@ export const NomePlanta = styled.Text`
     color: #56AB2F;
     text-transform: uppercase;
     font-weight: bold;
-    margin-bottom: 5px;
 `
 
 export const DescPlanta = styled.Text`
     font-size: 14px;
     font-family: 'Roboto_400Regular';
-    color: #656565;
+    color: #000;
 `
 
 export const BotaoFav = styled.TouchableOpacity`

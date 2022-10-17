@@ -13,7 +13,7 @@ export const Titulo = styled.Text`
     font-family: 'Lexend_300Light';  
 `
 
-export const ContainerSuasPlantas = styled.View`
+export const ContainerNaoAdicionado = styled.View`
     flex: 2;
     align-items: center;
     justify-content: center;
@@ -29,4 +29,8 @@ export const TextoFundo = styled.Text`
 export const ContainerMaisPopulares = styled.View`
     flex: 3;
     margin-top: 20px;
+`
+
+export const ContainerSuasPlantas = styled.View`
+    flex: 2.5
 `
