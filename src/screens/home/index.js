@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect} from 'react';
 import { Titulo, Container, ContainerSuasPlantas, ContainerMaisPopulares,
   TextoFundo,
   ContainerNaoAdicionado, } from './styles';
@@ -8,12 +8,42 @@ import CardPlanta from './components/CardPlanta';
 import CardFavoritos from './components/CardFavoritos';
 import PLANTAS from '../../../assets/data/plantas';
 
-import { Entypo } from '@expo/vector-icons'; 
 import { useFavoritos } from '../../context/favoritos';
+import { Entypo } from '@expo/vector-icons';
 
 export default function Home({navigation, route}) {
 
   const {add, favoritos} = useFavoritos()
+
+  function SemPlantas(){
+    return(
+      <ContainerNaoAdicionado>
+          <Entypo name="flower" style={{fontSize: 45}} color="#9C9C9C" />
+          <TextoFundo> Nenhuma planta adicionada :( </TextoFundo>
+      </ContainerNaoAdicionado>
+    )
+  }
+
+  function ComPlantas(favoritos){
+    return(
+      <ContainerSuasPlantas>
+        <FlatList 
+          horizontal= {true} 
+          data={favoritos} 
+          keyExtractor={(item) => item.id} 
+          renderItem = {({item}) => (CardFav(item))}
+        />
+      </ContainerSuasPlantas>
+    )
+  }
+
+  function TelaPlantas(favoritos){
+    if (favoritos) {
+      return <SemPlantas />
+    } else {
+      return <ComPlantas favoritos={favoritos}/>
+    }
+  }
 
   function CardFav(item){
     return(
@@ -81,7 +111,8 @@ export default function Home({navigation, route}) {
             keyExtractor={(item) => item.id} 
             renderItem = {({item}) => (CardFav(item))}
           />
-        </ContainerSuasPlantas>
+      </ContainerSuasPlantas>
+      {/* <TelaPlantas favoritos={favoritos}/> */}
       
       <Titulo> Mais Populares</Titulo>
       <ContainerMaisPopulares>       

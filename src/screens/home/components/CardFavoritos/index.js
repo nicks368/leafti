@@ -2,9 +2,9 @@ import React from "react";
 import { Container, DescPlanta, Imagem, NomePlanta } from "./styles";
 import { StyleSheet } from "react-native";
 
-export default function CardFavoritos({nome, desc, imagem}) {  
+export default function CardFavoritos({nome, desc, imagem, onPress}) {  
     return (
-        <Container style={estilo.sombra}>
+        <Container style={estilo.sombra} onPress={onPress}>
             <Imagem source={{uri: `${imagem}`}}/>
             <NomePlanta>{nome}</NomePlanta>
             <DescPlanta>{desc}</DescPlanta>

@@ -1,4 +1,5 @@
 import React, {createContext, useState, useContext, useEffect} from "react";
+import { Alert } from "react-native";
 
 const FavContent = createContext()
 
@@ -10,10 +11,25 @@ export default function FavProvider({children}) {
         console.log(favoritos)
     }, [favoritos])
 
+    function Mensagem(){
+        Alert.alert(
+            "Planta Adicionada ao seu Jardim!",
+            "",
+            [
+              {
+                text: "Ok",
+                style: "cancel",
+              },
+            ],
+            
+          );
+    }
+
     function add(item) {
         const newFavoritos = favoritos
         newFavoritos.push(item)
 
+        Mensagem()
         setFavoritos([...newFavoritos])
     }
 
