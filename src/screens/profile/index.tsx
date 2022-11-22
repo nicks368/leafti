@@ -28,7 +28,6 @@ export default function Profile({navigation, route}) {
       const userInfo = await response.json();
       
       setProfile(userInfo);
-    
      }
 
      useEffect(() =>{
@@ -41,8 +40,8 @@ export default function Profile({navigation, route}) {
   return ( 
     <Container>
       <ContainerPerfil>
-        <FotoPerfil source={(profile.picture? {uri: profile.picture} : require('../../../assets/imgs/perfildefault.jpg'))}/>
-        <NomePerfil>{ (profile.name? profile.name : 'xxxxxxxx')} </NomePerfil> 
+        <FotoPerfil source={{uri: profile.picture}}/>
+        <NomePerfil>{profile.name} </NomePerfil> 
         <ContainerSair onPress={()=> {navigation.navigate('Login')}}>
           <Feather name="log-out" style={{fontSize: 16}} color="#535353" />
           <TextoSair>Sair</TextoSair>

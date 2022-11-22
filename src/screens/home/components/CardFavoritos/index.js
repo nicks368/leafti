@@ -7,7 +7,7 @@ export default function CardFavoritos({nome, desc, imagem, onPress}) {
         <Container style={estilo.sombra} onPress={onPress}>
             <Imagem source={{uri: `${imagem}`}}/>
             <NomePlanta>{nome}</NomePlanta>
-            <DescPlanta>{desc}</DescPlanta>
+            <DescPlanta adjustsFontSizeToFit numberOfLines={4}>{desc}</DescPlanta>
         </Container>
     );
 

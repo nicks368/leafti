@@ -39,9 +39,9 @@ export default function Home({navigation, route}) {
 
   function TelaPlantas(favoritos){
     if (favoritos) {
-      return <SemPlantas />
-    } else {
       return <ComPlantas favoritos={favoritos}/>
+    } else {
+      return <SemPlantas />
     }
   }
 
@@ -104,14 +104,29 @@ export default function Home({navigation, route}) {
           <TextoFundo> Nenhuma planta adicionada :( </TextoFundo>
       </ContainerNaoAdicionado> */}
 
-      <ContainerSuasPlantas>
+      {favoritos
+      ? <ContainerSuasPlantas>
+          <FlatList 
+            horizontal= {true} 
+           data={favoritos} 
+            keyExtractor={(item) => item.id} 
+            renderItem = {({item}) => (CardFav(item))}
+          />
+        </ContainerSuasPlantas>
+          
+      : <ContainerNaoAdicionado>
+          <Entypo name="flower" style={{fontSize: 45}} color="#9C9C9C" />
+          <TextoFundo> Nenhuma planta adicionada :( </TextoFundo>
+         </ContainerNaoAdicionado>
+      }
+      {/* <ContainerSuasPlantas>
           <FlatList 
             horizontal= {true} 
             data={favoritos} 
             keyExtractor={(item) => item.id} 
             renderItem = {({item}) => (CardFav(item))}
           />
-      </ContainerSuasPlantas>
+      </ContainerSuasPlantas> */}
       {/* <TelaPlantas favoritos={favoritos}/> */}
       
       <Titulo> Mais Populares</Titulo>

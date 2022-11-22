@@ -12,7 +12,7 @@ export default function CardPlanta({onPress, nome, desc, imagem, item}) {
         <Container style={estilo.sombra} onPress={onPress}>
             <Imagem source={{uri: `${imagem}`}}/>
             <NomePlanta>{nome}</NomePlanta>
-            <DescPlanta>{desc}</DescPlanta>
+            <DescPlanta adjustsFontSizeToFit numberOfLines={4}>{desc}</DescPlanta>
             <BotaoFav onPress={()=> add(item)}>
               <Ionicons name="heart" size={24} color="#FF3F3F" />
             </BotaoFav>
