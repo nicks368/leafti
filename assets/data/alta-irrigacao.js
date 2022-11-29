@@ -1,0 +1,63 @@
+const ALTA = [
+    {
+        id:"01",
+        nome:"Peperômia",
+        nomeCien:"Peperomia caperata",
+        nomePopular:"Rabo-de-rato",
+        desc:"Embora variem consideravelmente na aparência, estas espécies têm, geralmente, caules espessos e forte  folhas carnudas, às vezes com janelas epidérmicas (fenestra). As flores de Peperomia geralmente vêm em pontas cônicas amarelas a marrons. Essas plantas perenes tropicais são cultivadas por sua folhagem ornamental. Elas são principalmente nativas da América tropical. Eles são compactos e geralmente não excedem 12 polegadas (30 cm) de altura",
+        luzSolar:"Planta de sombra, meia-sombra e luz indireta",
+        tamanho:"até 25cm",
+        irrigacao:"Regar a cada dois dias ",
+        toleranciaCalor:"Gostam de calor, resistem ao frio, mas não a geadas",
+        solo:"Solo rico em matéria orgânica, não precisa de fertilização",
+        img:"https://media.gazetadopovo.com.br/2021/11/23162426/peperomia-quero-clorofila-1-544x540.jpg",
+        imagemCard:"https://blog.plantei.com.br/wp-content/uploads/2021/12/peperomia-scandens.jpg",
+    },
+
+    {
+        id:"02",
+        nome:"Beijo-turco",
+        nomeCien:"Impatiens walleriana",
+        nomePopular:"Balsamina, Beijinho, Ciúmes, Impatiens, Maravilha, Maria-sem-vergonha",
+        desc:"",
+        luzSolar:"Meia-sombra ou sombra total",
+        tamanho:"10-40cm",
+        irrigacao:"",
+        toleranciaCalor:"",
+        solo:"",
+        img:"https://s2.glbimg.com/EMXY4DKiTWPG7rYCVF25CPhVbBA=/620x455/e.glbimg.com/og/ed/f/original/2021/08/13/madagascar-periwinkle-3307026_1920.jpg",
+        imagemCard:"https://vivoplantas.com.br/wp-content/uploads/2017/12/Beijo-impatiens.png",
+    },
+
+    {
+        id: "03",
+        nome: "lirio-da-paz",
+        nomeCien: "Spathiphyllum wallisii",
+        nomePopular: "Bandeira branca, Espatifilo, Bandeira da paz",
+        desc: "Esta planta não se adapta muito bem em climas muito frios, abaixo de 15°C no caso. Meia sombra é o ideal para que as flores surjam mais rápido. Estas são em forma de espádice, brancas e com um perfume muito leve. O florescimento acontece o ano inteiro, mais abundante durante a primavera e verão.",
+        luzSolar: "2",
+        tamanho: "1 - 3m",
+        irrigacao: "3 em 3 dias",
+        toleranciaCalor: "25°",
+        solo: "",
+        img: "https://i0.wp.com/guiadassuculentas.com/wp-content/uploads/2020/12/Lirio-da-Paz-Saiba-Tudo-Sobre-Essa-Planta.jpg?re",
+        imagemCard: "https://i1.wp.com/files.agro20.com.br/uploads/2020/02/Lírio-da-paz-2.jpg?fit=1024%2C615&ssl=1",
+    },
+
+    {
+        id: "04",
+        nome: "samambaia",
+        nomeCien: "phlebodium decumanum",
+        nomePopular: "Calaguala, Guaririnha, Cipó cabeludo, Erva de macaco, Rabo de caxinguelê",
+        desc: "As samambaias, ou fetos, são vegetais vasculares membros do táxon das pteridófitas (que deixou de ter validade taxonômica e só é utilizado como uma denominação informal). Elas possuem tecidos vasculares (xilema e floema), folhas verdadeiras, se reproduzem através de esporos e não produzem sementes ou flores. A diversificação das samambaias parece ter ocorrido no Devoniano (há mais de 400 milhões de anos). Elas foram essenciais na ocupação dos ambientes terrestres pelos animais, fornecendo habitat e alimento além de serem importantes na formação do solo rico em nutrientes que viria a propiciar a formação das grandes florestas do carbonífero. Neste período as samambaias e as licófitas eram as principais representantes vegetais do planeta.",
+        luzSolar: "2",
+        tamanho: "1 - 3m",
+        irrigacao: "3 em 3 dias",
+        toleranciaCalor: "25°",
+        solo: "",
+        img: "https://jardim.biz/wp-content/uploads/2021/06/Tipos-de-samambaia.jpg",
+        imagemCard: "https://www.cultivando.com.br/wp-content/uploads/2016/02/samambaia1-e1455936471471.jpg",
+    },
+]
+
+export default ALTA

@@ -5,7 +5,7 @@ export const Container = styled.View`
 `
 
 export const ContainerPerfil = styled.View`
-    flex: 0.7;
+    flex: 1.5;
     justify-content: center;
     align-items: center;
     background-color: #B5E59A;
@@ -25,22 +25,53 @@ export const NomePerfil = styled.Text`
     font-family: 'Roboto_500Medium';
 `
 
-export const ContainerBotoes = styled.View`
-    flex: 3;
-    justify-content: center;
+export const ContainerConfig = styled.View`
+    flex: 2;
+    padding: 12px;
+    padding-top: 20px;
     align-items: center;
     width: 100%;
 `
 
-export const BtnOpcao = styled.TouchableOpacity`
-    width: 90%;
-    height: 55px;
-    flex-direction: row;
-    align-items: center;
-    padding-left: 10px;
-    margin-top: 12px;
-    
+export const Titulo = styled.Text`
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Roboto_500Medium';
+    text-decoration: underline;
 `
+
+export const ContainerBotoes = styled.View`
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 90%;
+`
+
+export const TituloRow = styled.Text`
+    font-size: 18px;
+    font-family: 'Roboto_500Medium';
+`
+
+export const TextoRow = styled.Text`
+    font-size: 18px;
+    font-family: 'Roboto_500Medium';
+    font-style: italic;
+`
+
+export const Botao = styled.TouchableOpacity`
+    width: 90%;
+    background-color: #8DDF5F;
+    padding: 10px;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 40%;
+`
+
+export const TextoBotao = styled.Text`
+    font-size: 16px;
+    font-family: 'Roboto_500Medium';
+`
+
 export const TextBtn = styled.Text`
     font-size: 20px;
     font-family: 'Roboto_500Medium';

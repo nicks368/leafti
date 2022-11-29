@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import { Container, ContainerPerfil, ContainerSair, FotoPerfil, NomePerfil, TextoSair } from './styles.js';
-
-import TopPerfilNavigator from '../../routes/top.perfil.routes.js';
+import { Botao, Container, ContainerBotoes, ContainerConfig, ContainerPerfil,
+ContainerSair, FotoPerfil, NomePerfil, TextoBotao, TextoRow, TextoSair, Titulo,
+TituloRow } from './styles.js';
 
 import { Feather } from '@expo/vector-icons';
 
@@ -41,15 +41,35 @@ export default function Profile({navigation, route}) {
     <Container>
       <ContainerPerfil>
         <FotoPerfil source={{uri: profile.picture}}/>
-        <NomePerfil>{profile.name} </NomePerfil> 
+        <NomePerfil>{profile.given_name} </NomePerfil> 
         <ContainerSair onPress={()=> {navigation.navigate('Login')}}>
           <Feather name="log-out" style={{fontSize: 16}} color="#535353" />
           <TextoSair>Sair</TextoSair>
         </ContainerSair>
       </ContainerPerfil>
 
-      <TopPerfilNavigator />
+      <ContainerConfig>
+        <Titulo>Configurações</Titulo>
 
+        <ContainerBotoes>
+          <TituloRow>Nome:</TituloRow>
+          <TextoRow>{profile.given_name}</TextoRow>
+        </ContainerBotoes>
+
+        <ContainerBotoes>
+          <TituloRow>Sobrenome:</TituloRow>
+          <TextoRow>{profile.family_name}</TextoRow>
+        </ContainerBotoes>
+
+        <ContainerBotoes>
+          <TituloRow>E-mail:</TituloRow>
+          <TextoRow>{profile.email}</TextoRow>
+        </ContainerBotoes>
+
+        <Botao onPress={()=> {navigation.navigate('Termos')}}>
+          <TextoBotao>Termos de Uso</TextoBotao>
+        </Botao>
+      </ContainerConfig>
     </Container>
   );
 }

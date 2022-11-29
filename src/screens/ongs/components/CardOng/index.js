@@ -3,18 +3,15 @@ import { Container, ContainerCard, ContainerInfo, ContainerSeta, ContainerTexto,
 import { StyleSheet } from "react-native";
 import { AntDesign } from '@expo/vector-icons';
 
-export default function CardOng({nome, descCard, desc, imagem, onPress}) {  
+export default function CardOng({nome, descCard, imagem, onPress}) {  
     return (
         <Container>
-            <ContainerInfo>
-                <Texto>{desc}</Texto>
-            </ContainerInfo>
             
             <ContainerCard style={estilo.sombra} onPress={onPress}>
                 <Imagem source={{uri: `${imagem}`}}/>
                 <ContainerTexto>
                     <NomeOng>{nome}</NomeOng>
-                    <DescOng>"{descCard}"</DescOng>
+                    <DescOng adjustsFontSizeToFit numberOfLines={5}>"{descCard}"</DescOng>
                     <ContainerSeta>
                         <AntDesign name="arrowright" style={{fontSize: 22}} color="black" />
                     </ContainerSeta>

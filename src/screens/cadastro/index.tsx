@@ -110,7 +110,7 @@ export default function Cadastro({navigation}) {
           />
         </BtnGoogle>
 
-        <TextLink style={{fontSize: 14}} onPress={() => navigation.goBack()}>Já possui uma conta?</TextLink>
+        <TextLink style={{fontSize: 14}} onPress={() => navigation.navigate('Login')}>Já possui uma conta?</TextLink>
       </ContainerGoogle>
 
       <ContainerTextEmp> 

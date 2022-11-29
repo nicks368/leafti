@@ -6,7 +6,7 @@ import { Titulo, Container, ContainerSuasPlantas, ContainerMaisPopulares,
 import { FlatList, View } from 'react-native';
 import CardPlanta from './components/CardPlanta';
 import CardFavoritos from './components/CardFavoritos';
-import PLANTAS from '../../../assets/data/plantas';
+import POPULARES from '../../../assets/data/populares';
 
 import { useFavoritos } from '../../context/favoritos';
 import { Entypo } from '@expo/vector-icons';
@@ -50,7 +50,7 @@ export default function Home({navigation, route}) {
       <CardFavoritos
       imagem={item.imagemCard}
       nome={item.nome}
-      desc={item.descCard}
+      desc={item.nomePopular}
       onPress={()=> {navigation.navigate('PerfilPlanta', {
         img: item.img,
         nome: item.nome,
@@ -62,7 +62,8 @@ export default function Home({navigation, route}) {
         luzSolar: item.luzSolar,
         tamanho: item.tamanho,
         irrigacao: item.irrigacao,
-        toleranciaCalor: item.toleranciaCalor
+        toleranciaCalor: item.toleranciaCalor,
+        solo: item.solo
       }
       )}}
       />
@@ -74,7 +75,7 @@ export default function Home({navigation, route}) {
       <CardPlanta
       imagem={item.imagemCard}
       nome={item.nome}
-      desc={item.descCard}
+      desc={item.nomePopular}
       item={item}
       onPress={()=> {navigation.navigate('PerfilPlanta', {
         img: item.img,
@@ -88,6 +89,7 @@ export default function Home({navigation, route}) {
         tamanho: item.tamanho,
         irrigacao: item.irrigacao,
         toleranciaCalor: item.toleranciaCalor,
+        solo: item.solo,
       }
       )}}
       />
@@ -139,7 +141,7 @@ export default function Home({navigation, route}) {
           }}
           numColumns={2}
           horizontal= {false} 
-          data={PLANTAS} 
+          data={POPULARES} 
           keyExtractor={(item) => item.id} 
           renderItem = {({item}) => (CardPopulares(item))}
         />

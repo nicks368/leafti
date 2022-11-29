@@ -8,12 +8,11 @@ import LogoHeader from '../components/logo-header';
 
 import StackHome from './stack.home.routes';
 import Search from '../screens/search/index';
-import Calendario from '../screens/calendario';
 import StackOngs from './stack.ong.routes';
 import StackPerfil from './stack.perfil.routes';
 import Header from '../components/header';
 
-import { Feather, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons'
+import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons'
 
 
 const Tab = createBottomTabNavigator();
@@ -79,20 +78,6 @@ export default function AppRoutes(){
                         <LogoHeader/>
                     ), 
                  }}
-            />
-
-            <Tab.Screen
-                name="Calendário" 
-                component={Calendario}
-                options={{
-                    tabBarLabel: '',
-                    tabBarIcon: ({focused}) => (
-                        <Feather name="calendar" style={estilos.icones} color={focused ? '#1C6119' : '#fff'}/>
-                    ),
-                    headerLeft: ()=> (
-                        <LogoHeader/>
-                    ), 
-                }}
             />
 
             <Tab.Screen

@@ -32,5 +32,5 @@ export const ContainerMaisPopulares = styled.View`
 `
 
 export const ContainerSuasPlantas = styled.View`
-    flex: 4;
+    flex: 2.5;
 `

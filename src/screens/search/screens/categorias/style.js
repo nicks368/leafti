@@ -11,3 +11,11 @@ export const TituloEspecie = styled.Text`
     color: #56AB2F;
     font-weight: bold;
 `
+
+export const Desc = styled.Text`
+    font-size: 18px;
+    margin-left: 25px;
+    margin-right: 25px;
+    color: #56AB2F;
+    font-style: italic;
+`

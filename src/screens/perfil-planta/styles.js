@@ -97,6 +97,20 @@ export const TextoInfo = styled.Text`
     font-style: italic;
 `
 
+export const TextoTituloA = styled.Text`
+    color: #1C6119;
+    font-size: 16px;
+    font-family: 'Roboto_400Regular';
+`
+
+export const TextoInfoA = styled.Text`
+    color: #3F8E3B;
+    font-size: 16px;
+    font-family: 'Roboto_300Light';
+    font-style: italic;
+    margin-bottom: 10px;
+`
+
 export const TextoAdicionar = styled.Text`
     margin-top: 20px;
     color: #5B3932;

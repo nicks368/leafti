@@ -14,7 +14,7 @@ export default function Todas({navigation}){
       <CardPopulares 
         imagem={item.imagemCard}
         nome={item.nome}
-        desc={item.descCard}
+        desc={item.nomePopular}
         onPress={()=> {navigation.navigate('PerfilPlanta', {
           img: item.img,
           nome: item.nome,
@@ -26,7 +26,8 @@ export default function Todas({navigation}){
           luzSolar: item.luzSolar,
           tamanho: item.tamanho,
           irrigacao: item.irrigacao,
-          toleranciaCalor: item.toleranciaCalor
+          toleranciaCalor: item.toleranciaCalor,
+          solo: item.solo,
         }
         )}}
       />

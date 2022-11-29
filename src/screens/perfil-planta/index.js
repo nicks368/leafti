@@ -1,9 +1,9 @@
 import React from "react";
-import { Container, ContainerDesc, ContainerImagem, ContainerInfos, ContainerNomesPopulares, ContainerScroll, ImgPlanta, SectionInfo, TextoAdicionar, TextoDesc, TextoInfo, TextoNome, TextoNomeCien, TextoNomes, TextoTitulo, TituloNomes} from "./styles";
+import { Container, ContainerDesc, ContainerImagem, ContainerInfos, ContainerNomesPopulares, ContainerScroll, ImgPlanta, SectionInfo, TextoAdicionar, TextoDesc, TextoInfo, TextoInfoA, TextoNome, TextoNomeCien, TextoNomes, TextoTitulo, TextoTituloA, TituloNomes} from "./styles";
 import { LinearGradient } from "expo-linear-gradient";
 
 export default function PerfilPlanta({route}){
-    const {img, nome, nomeCien, desc, nomePopular, familia, especie, luzSolar, tamanho, irrigacao, toleranciaCalor} = route.params;
+    const {img, nome, nomeCien, desc, nomePopular, solo, luzSolar, tamanho, irrigacao, toleranciaCalor} = route.params;
 
     return(
         <ContainerScroll>
@@ -26,40 +26,30 @@ export default function PerfilPlanta({route}){
                 <TextoDesc>
                     {desc}
                  </TextoDesc>
-
-                 <TextoAdicionar>Adicionar ao Jardim +</TextoAdicionar>
             </ContainerDesc>
 
-            <ContainerInfos>
-                <SectionInfo>
-                    <TextoTitulo>Família:</TextoTitulo>
-                    <TextoInfo>{familia}</TextoInfo>
-                </SectionInfo>
-
-                <SectionInfo>
-                    <TextoTitulo>Espécie:</TextoTitulo>
-                    <TextoInfo>{especie}</TextoInfo>
-                </SectionInfo>
+            <ContainerInfos> 
+                
                 
                 <SectionInfo>
                     <TextoTitulo>Luz Solar:</TextoTitulo>
                     <TextoInfo>{luzSolar}</TextoInfo>
-                </SectionInfo>  
+                </SectionInfo>
+
+                <TextoTituloA>Irrigação:</TextoTituloA>
+                <TextoInfoA>{irrigacao}</TextoInfoA>
+
+                <TextoTituloA>Solo:</TextoTituloA>
+                <TextoInfoA>{solo}</TextoInfoA>
+            
+                <TextoTituloA>Tolerância de Temperatura:</TextoTituloA>
+                <TextoInfoA>{toleranciaCalor}</TextoInfoA>
 
                 <SectionInfo>
                     <TextoTitulo>Tamanho:</TextoTitulo>
                     <TextoInfo>{tamanho}</TextoInfo>
                 </SectionInfo>
-
-                <SectionInfo>
-                    <TextoTitulo>Irrigação:</TextoTitulo>
-                    <TextoInfo>{irrigacao}</TextoInfo>
-                </SectionInfo>
-
-                <SectionInfo>
-                    <TextoTitulo>Tolerância de Temperatura:</TextoTitulo>
-                    <TextoInfo>{toleranciaCalor}</TextoInfo>
-                </SectionInfo>             
+             
             </ContainerInfos>
         </ContainerScroll>
     );

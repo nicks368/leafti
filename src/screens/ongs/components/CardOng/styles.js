@@ -41,7 +41,7 @@ export const NomeOng = styled.Text`
     font-size: 20px;
     font-family: 'Roboto_400Regular';
     color: #1C6119;
-    text-transform: capitalize;
+    text-transform: uppercase;   
     font-weight: bold;
     margin-bottom: 5px;
 `

@@ -41,7 +41,6 @@ export default function TopNavigator(){
             <Tab.Screen name="todas" component={Todas} />
             <Tab.Screen name="populares" component={Populares}/>
             <Tab.Screen name="categorias" component={Categorias} />
-            <Tab.Screen name="família" component={Familia} />
         </Tab.Navigator>
     );
 }

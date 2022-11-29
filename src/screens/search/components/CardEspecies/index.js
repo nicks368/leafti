@@ -4,12 +4,12 @@ import { StyleSheet } from "react-native";
 import { Ionicons } from '@expo/vector-icons';
 import { useFavoritos } from "../../../../context/favoritos";
 
-export default function CardEspecies({nome, desc, imagem, item}) {  
+export default function CardEspecies({nome, desc, imagem, item, onPress}) {  
     
     const {add} = useFavoritos() 
   
     return (
-        <Container style={estilo.sombra}>
+        <Container onPress={onPress} style={estilo.sombra}>
             <Imagem source={{uri: `${imagem}`}}/>
             <NomePlanta>{nome}</NomePlanta>
             <DescPlanta adjustsFontSizeToFit numberOfLines={4}>{desc}</DescPlanta>

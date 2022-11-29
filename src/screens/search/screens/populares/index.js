@@ -2,9 +2,9 @@ import React from "react";
 import { FlatList} from "react-native";
 import CardPopulares from "../../components/CardPopulares";
 import { Container } from "./style";
-import PLANTAS from "../../../../../assets/data/plantas";
+import POPULARES from "../../../../../assets/data/populares";
 
-export default function Populares(){
+export default function Populares({navigation}){
    return( 
     <Container>
         <FlatList
@@ -15,14 +15,29 @@ export default function Populares(){
           }}
           numColumns={2}
           horizontal= {false} 
-          data={PLANTAS} 
+          data={POPULARES} 
           keyExtractor={(item) => item.id} 
           renderItem = {({item}) => (
             <CardPopulares 
               imagem={item.imagemCard}
               nome={item.nome}
-              desc={item.descCard}
+              desc={item.nomePopular}
               item={item}
+              onPress={()=> {navigation.navigate('PerfilPlanta', {
+                img: item.img,
+                nome: item.nome,
+                nomeCien: item.nomeCien,
+                desc: item.desc,
+                nomePopular: item.nomePopular,
+                familia: item.familia,
+                especie: item.especie,
+                luzSolar: item.luzSolar,
+                tamanho: item.tamanho,
+                irrigacao: item.irrigacao,
+                toleranciaCalor: item.toleranciaCalor,
+                solo: item.solo,
+              }
+              )}}
             />
           )}
         />

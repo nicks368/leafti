@@ -1,21 +1,6 @@
-const PLANTAS = [
+const MEIA = [
     {
         id: "01",
-        nome: "Agave Dragão",
-        nomeCien: " Agave attenuata",
-        nomePopular: "Pescoço-de-cisne e tromba de elefante",
-        desc: "Agave attenuata, planta originária do México, é conhecida popularmente como agave-dragão ou pescoço-de-cisne devido à forma como a sua inflorescência se apresenta, numa espiga de flores muito alta e espessa, curvando com o peso. O nome científico attenuata significa frágil ou fino.",
-        luzSolar: "Pleno Sol (no mínimo 7 horas de sol por dia)",
-        tamanho: "1m – 1,5m",
-        irrigacao: "A cada 10 dias em estações quentes e a cada 20 dias em estações frias",
-        toleranciaCalor: "Não tolera frio",
-        solo: "Aprecia o solo fértil, arenoso, rico em matéria orgânica e bem drenável;",
-        img: "https://static.wixstatic.com/media/283335_928acaf7f66d4ac5897f4227d8ccab16~mv2.jpg/v1/fill/w_560,h_747,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Agave%20Dragão%20(Agave%20attenuata)%20(4).jpg",
-        imagemCard: "https://www.capitalmudas.com.br/tim.php?src=uploads/fornecedores/2019/03/agave-dragao-322-1-1553635571.jpg&w=1280&h=900",
-    },
-
-    {
-        id: "02",
         nome: "Aglaonema",
         nomeCien: "Aglaonema",
         nomePopular: "Café-de-salão e Falso-café-de-salão",
@@ -30,7 +15,7 @@ const PLANTAS = [
     },
 
     {
-        id: "03",
+        id: "02",
         nome: "Antúrio",
         nomeCien: "Anthurium",
         nomePopular: "Antúrio de Flor",
@@ -45,22 +30,7 @@ const PLANTAS = [
     },
 
     {
-        id:"04",
-        nome:"Árvore da felicidade",
-        nomeCien:" Polyscias guilfoylei",
-        nomePopular:"Arália-cortina",
-        desc:"A planta cresce bastante lentamente, mas pode atingir até 1 a 2 metros de altura. As folhas são de um pigmento verde escuro, de textura brilhante, são tripinadas e parecem divididas. ",
-        luzSolar:"Meia sombra e sol direto em parte (manhã ou fim da tarde)",
-        tamanho:"Pode chegar até 3 metros de altura dependendo do tamanho do vaso",
-        irrigacao:" No calor regue-a 2 a 3 vezes por semana e no frio 1 a 2, borrife água nas folhas",
-        toleranciaCalor:"Preferem calor, mas toleram frio, não toleram ambientes com ar-condicionado",
-        solo:"Solo fértil e bem drenável",
-        img:"https://www.floresefolhagens.com.br/wp-content/uploads/2015/05/arvore-da-felicidade-polyscias-fruticosa-1-2.jpg",
-        imagemCard:"https://www.floresefolhagens.com.br/wp-content/uploads/2015/05/arvore-da-felicidade-polyscias-fruticosa-1-4.jpg",
-    },
-    
-    {
-        id:"05",
+        id:"03",
         nome:"Peperômia",
         nomeCien:"Peperomia caperata",
         nomePopular:"Rabo-de-rato",
@@ -73,24 +43,9 @@ const PLANTAS = [
         img:"https://media.gazetadopovo.com.br/2021/11/23162426/peperomia-quero-clorofila-1-544x540.jpg",
         imagemCard:"https://blog.plantei.com.br/wp-content/uploads/2021/12/peperomia-scandens.jpg",
     },
-    
-    {
-        id:"06",
-        nome:"Pata de Elefante",
-        nomeCien:"Beaucarnea recurvata",
-        nomePopular:"Nolina, biucarnea, palmeira-rabo-de-cavalo",
-        desc:"A beleza da planta é toda voltada ao seu tronco singular, que exerce a função de armazenar água em períodos de estiagem. Isso porque ela vem justamente do ambiente desértico do México, onde é preciso sobreviver por longos períodos de seca.",
-        luzSolar:"Sol pleno",
-        tamanho:"Pode atingir 5m de altura",
-        irrigacao:"Permita a camada superficial do solo secar completamente para então regar novamente",
-        toleranciaCalor:"Tolera calor e frio",
-        solo:"Solo bem drenado e adubação a cada dois meses",
-        img:"https://s2.glbimg.com/ML2EtucmAm_zA7DZRb3NKJVYrPU=/smart/e.glbimg.com/og/ed/f/original/2021/02/12/pata-de-elefante.jpg",
-        imagemCard:"https://s2.glbimg.com/ltDAaN-_imoPyRbvoi0minKpol0=/e.glbimg.com/og/ed/f/original/2021/11/18/pata-de-elefante-casaejardim.jpg",
-    },
 
     {
-        id:"07",
+        id:"04",
         nome:"Palmeira-ráfis",
         nomeCien:"Rhapis excelsa",
         nomePopular:"palmeira-dama",
@@ -105,7 +60,7 @@ const PLANTAS = [
     },
 
     {
-        id:"08",
+        id:"05",
         nome:"Maranta",
         nomeCien:"Maranta",
         nomePopular:"Urubá",
@@ -120,37 +75,7 @@ const PLANTAS = [
     },
 
     {
-        id: "09",
-        nome: "jiboia",
-        nomeCien: "Epipremnum pinnatum",
-        nomePopular: "Hera-do-diabo",
-        desc: "A planta jiboia é uma ótima opção para decorar a casa. É uma trepadeira com oito espécies diferentes e é muito fácil de cuidar, por isso é a escolha de muitas pessoas que querem dar um toque verde ao espaço",
-        luzSolar: "2",
-        tamanho: "1 - 3m",
-        irrigacao: "3 em 3 dias",
-        toleranciaCalor: "25°",
-        solo: "",
-        img: "https://a-static.mlcdn.com.br/1500x1500/planta-jiboia-njoy-epipremnum-aureum-njoy-verdadeira-inspira-flora/inspiraflora/420da048c1bd11ecb0d14201ac18506b/a51485aa9d72fa7589bc267e0e41d5cd.jpeg",
-        imagemCard: "https://www.simplichique.com.br/wp-content/uploads/2017/02/jiboia-na-decora%C3%A7%C3%A3o-13.jpg",
-    },
-
-    {
-        id: "10",
-        nome: "orquídea",
-        nomeCien: "Orchidaceae",
-        nomePopular: "Lélia, Laélia",
-        desc: "Apresentam muitíssimas e variadas formas, cores e tamanhos e existem em todos os continentes, exceto na Antártida, predominando nas áreas tropicais. Não são plantas parasitas, nutrindo-se apenas de material em decomposição que cai das árvores e acumula-se ao emaranhar-se em suas raízes.",
-        luzSolar: "2",
-        tamanho: "1 - 3m",
-        irrigacao: "3 em 3 dias",
-        toleranciaCalor: "25°",
-        solo: "",
-        img: "https://i0.wp.com/www.comocuidardasorquideas.com/wp-content/uploads/2020/07/orqu%C3%ADdeas-no-inverno-Cymbidium.jpg?fit=1024%2C633&ssl=1",
-        imagemCard: "https://tribunadejundiai.com.br/wp-content/uploads/2022/06/orquidea-horta-e-jardim-1-compressed.jpg",
-    },
-
-    {
-        id:"11",
+        id:"06",
         nome:"Clorofito",
         nomeCien:"Chlorophytum comosum",
         nomePopular:"",
@@ -165,7 +90,7 @@ const PLANTAS = [
     },
 
     {
-        id:"12",
+        id:"07",
         nome:"Beijo-turco",
         nomeCien:"Impatiens walleriana",
         nomePopular:"Balsamina, Beijinho, Ciúmes, Impatiens, Maravilha, Maria-sem-vergonha",
@@ -180,7 +105,7 @@ const PLANTAS = [
     },
 
     {
-        id:"13",
+        id:"08",
         nome:"Begônia",
         nomeCien:"Begoniaceae",
         nomePopular:"Azedinha",
@@ -195,7 +120,7 @@ const PLANTAS = [
     },
 
     {
-        id:"14",
+        id:"09",
         nome:"Aspargos Pluma",
         nomeCien:"Asparagus densiflorus",
         nomePopular:"Aspargo-rabo-de-gato",
@@ -210,7 +135,7 @@ const PLANTAS = [
     },
 
     {
-        id: "15",
+        id: "10",
         nome: "violeta",
         nomeCien: "Viola",
         nomePopular: "Viola, Amores-perfeitos",
@@ -225,7 +150,7 @@ const PLANTAS = [
     },
 
     {
-        id: "16",
+        id: "11",
         nome: "lirio-da-paz",
         nomeCien: "Spathiphyllum wallisii",
         nomePopular: "Bandeira branca, Espatifilo, Bandeira da paz",
@@ -240,7 +165,7 @@ const PLANTAS = [
     },
 
     {
-        id: "17",
+        id: "12",
         nome: "espada de são jorge",
         nomeCien: "Dracaena trifasciata",
         nomePopular: "Língua de sogra, Rabo de lagarto, Sanseviéria",
@@ -255,7 +180,7 @@ const PLANTAS = [
     },
 
     {
-        id:"18",
+        id:"13",
         nome:"Aspidistra",
         nomeCien:"Aspidistra",
         nomePopular:"",
@@ -270,82 +195,37 @@ const PLANTAS = [
     },
 
     {
-        id: "19",
-        nome: "rosa",
-        nomeCien: "rosa",
-        nomePopular: "roseira, rosa-arbustiva",
-        desc: "As rosas pertencem à família Rosaceae, e ao gênero Rosa L., com mais de 100 espécies, e milhares de variedades, híbridos e cultivares. São arbustos ou trepadeiras, providos de acúleos. As folhas são simples, partidas em 5 ou 7 lóbulos de bordos denteados. As flores, na maioria das vezes, são solitárias. Apresentam originalmente 5 pétalas, muitos estames e um ovário ínfero. Os frutos são pequenos, normalmente vermelhos, algumas vezes comestíveis",
-        luzSolar: "4",
-        tamanho: "10 - 30cm",
-        irrigacao: "2 em 2 dias",
-        toleranciaCalor: "22°",
-        solo: "",
-        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Red_rose.jpg/280px-Red_rose.jpg",
-        imagemCard: "https://www.floresefolhagens.com.br/wp-content/uploads/2017/01/tipos-de-rosas-1-4.jpg",
-    },
-
-    {
-        id:"20",
+        id:"14",
         nome:"Bambu-da-sorte",
         nomeCien:"Dracaena sanderiana",
-        nomePopular:"Bambu-da-sorte, Dracena-fita",
-        desc:"Dracaena sanderiana é uma espécie de planta com flor da família Asparagaceae , nativa da África Central .  Foi nomeado após o jardineiro alemão-inglês Henry Frederick Conrad Sander (1847-1920). A planta é comumente comercializada como bambu da sorte",
+        nomePopular:"",
+        desc:"",
         luzSolar:"Meia-sombra ou sombra total",
-        tamanho:"Cresce até 180 centímetros de altura",
-        irrigacao:"Regue 2 vezes por semana no calor e no frio 1",
-        toleranciaCalor:"A planta prefere um clima quente e não tolera muito bem o frio",
-        solo:"O solo deve ser úmido, porém não o encharque",
+        tamanho:"",
+        irrigacao:"",
+        toleranciaCalor:"",
+        solo:"",
         img:"https://http2.mlstatic.com/D_NQ_NP_844689-MLB49752995852_042022-O.jpg",
         imagemCard:"https://www.petz.com.br/blog/wp-content/uploads/2021/12/como-cuidar-do-bambu-da-sorte-topo.jpg",
     },
 
     {
-        id: "21",
-        nome: "girassol",
-        nomeCien: "Helianthus annuus",
-        nomePopular: "Mirassol",
-        desc: "Os girassóis são plantas originárias da América do Norte cultivada pelos povos indígenas para alimentação, foram domesticadas por volta do ano 1 000 a.C. Francisco Pizarro encontrou diversos objetos incas e imagens moldadas em ouro que fazem referência aos girassóis como seu Deus do Sol.",
+        id: "15",
+        nome: "comigo ninguem pode",
+        nomeCien: "Dieffenbachia seguine",
+        nomePopular: "Aningapara",
+        desc: "É uma planta da família das Araceae muito apreciada como ornamental de interiores, dada a sua tolerância à baixa luminosidade ambiente e baixa umidade relativa do ar. Produz grandes folhas variegadas, com vários tons de verde e amarelo, lustrosas e duradouras, o que o torna muito interessante em decoração de interiores. Em algumas regiões do mundo, a sua popularidade como planta doméstica é acrescida devido à fama que a planta leva de espantar o mau-olhado e maus-espíritos",
         luzSolar: "2",
         tamanho: "1 - 3m",
         irrigacao: "3 em 3 dias",
         toleranciaCalor: "25°",
         solo: "",
-        img: "https://upload.wikimedia.org/wikipedia/commons/4/40/Sunflower_sky_backdrop.jpg",
-        imagemCard: "https://s2.glbimg.com/fEGESP9MWt53d4dxlrZewiQXceg=/620x480/smart/e.glbimg.com/og/ed/f/original/2019/11/27/decoracao-com-girassol-curiosidades-sobre-o-girassol.jpg",
-    },
-
-    {
-        id: "22",
-        nome: "samambaia",
-        nomeCien: "phlebodium decumanum",
-        nomePopular: "Calaguala, Guaririnha, Cipó cabeludo, Erva de macaco, Rabo de caxinguelê",
-        desc: "As samambaias, ou fetos, são vegetais vasculares membros do táxon das pteridófitas (que deixou de ter validade taxonômica e só é utilizado como uma denominação informal). Elas possuem tecidos vasculares (xilema e floema), folhas verdadeiras, se reproduzem através de esporos e não produzem sementes ou flores. A diversificação das samambaias parece ter ocorrido no Devoniano (há mais de 400 milhões de anos). Elas foram essenciais na ocupação dos ambientes terrestres pelos animais, fornecendo habitat e alimento além de serem importantes na formação do solo rico em nutrientes que viria a propiciar a formação das grandes florestas do carbonífero. Neste período as samambaias e as licófitas eram as principais representantes vegetais do planeta.",
-        luzSolar: "Meia sombra",
-        tamanho: "30 a 150 centimetros",
-        irrigacao: "Regar todo dia em quantidades pequenas pra manter o solo úmido, mas não encharcar",
-        toleranciaCalor: "Gostam de clima temperados, suporta calor, mas não suporta frio",
-        solo: "Solo ricos em matéria orgânica e que retenha água",
-        img: "https://jardim.biz/wp-content/uploads/2021/06/Tipos-de-samambaia.jpg",
-        imagemCard: "https://www.cultivando.com.br/wp-content/uploads/2016/02/samambaia1-e1455936471471.jpg",
-    },
-
-    {
-        id: "23",
-        nome: "comigo ninguem pode",
-        nomeCien: "Dieffenbachia seguine",
-        nomePopular: "Aningapara",
-        desc: "É uma planta da família das Araceae muito apreciada como ornamental de interiores, dada a sua tolerância à baixa luminosidade ambiente e baixa umidade relativa do ar. Produz grandes folhas variegadas, com vários tons de verde e amarelo, lustrosas e duradouras, o que o torna muito interessante em decoração de interiores. Em algumas regiões do mundo, a sua popularidade como planta doméstica é acrescida devido à fama que a planta leva de espantar o mau-olhado e maus-espíritos",
-        luzSolar: "Meia sombra",
-        tamanho: "Ela normalmente varia entre 20 e 50 centímetros, mas se ela tiver apoios pode crescer até 2 metros; ",
-        irrigacao: "Regar quando estiver seco",
-        toleranciaCalor: "Gosta de calor e não tolera muito bem ao frio",
-        solo: "Gosta de um solo com boa drenagem",
         img: "https://http2.mlstatic.com/D_NQ_NP_674470-MLB32141548686_092019-O.jpg",
         imagemCard: "https://projetojardinando.com.br/wp-content/uploads/2020/08/diefenbachia_destaque_1280x720_1-1024x576-1.jpg",
     },
 
     {
-        id:"24",
+        id:"16",
         nome:"Capim do texas",
         nomeCien:"Pennisetum setaceum",
         nomePopular:"capim-chorão",
@@ -359,35 +239,6 @@ const PLANTAS = [
         imagemCard:"https://www.sitiodamata.com.br/pub/media/catalog/product/cache/80281f1a4d89199560fc0837e49d13da/c/a/capim-texa-pennisetum-setaceum-rubrum_3nd.jpg",
     },
 
-    {
-        id:"25",
-        nome:"Rosa de Pedra ",
-        nomeCien:"Echeveria elegans",
-        nomePopular:"Bola-de-neve-mexicana",
-        desc:"Uma suculenta pequena, com colorações entre o roxo, lilás, verde claro e verde escuro, uma das mais conhecidas das suculentas, uma ótima opção que vive de baixa manutenção e variadas situações climáticas.",
-        luzSolar:" Sombra e Sol pleno ",
-        tamanho:"10 a 15cm",
-        irrigacao:"No calor, uma vez por semana, no frio, uma vez a cada duas semanas.",
-        toleranciaCalor:"-5° a 40°C",
-        solo:" fértil, rico em matéria orgânica, com adubo rico em potássio e boa drenagem com adição de brita e areia grossa.",
-        img:" https://i0.wp.com/guiadassuculentas.com/wp-content/uploads/2019/09/Rosa-de-Pedra.jpg?fit=960%2C640&ssl=1 ",
-        imagemCard:" https://s2.glbimg.com/zevSZl1XgahZLgYkMkQTGeRDOBQ=/620x455/e.glbimg.com/og/ed/f/original/2021/04/26/echeveria-elegans.jpg ",
-    },
-
-    {
-        id:"26",
-        nome:"Dedo de moça ",
-        nomeCien:"Sedum Morganianum ",
-        nomePopular:" Sedum, suculenta ",
-        desc:"Nativa do sul do México e de Honduras, é uma suculenta pendente, com folhas “gordinhas” e pontudas, é resistente a secas e de baixa manutenção, apesar de sua fragilidade. ",
-        luzSolar:" Meia-sombra ",
-        tamanho:" 60 a 120cm",
-        irrigacao:" A cada 2 ou 3 dias",
-        toleranciaCalor:" 10º a 32°C",
-        solo:"Não é exigente com seu solo, mas recomenda-se enriquecê-lo de vez em quando, com substrato especial para suculentas. ",
-        img:" https://s2.glbimg.com/U5VsYG0UHHKLa0_zL6fkq2_4AxM=/620x466/smart/e.glbimg.com/og/ed/f/original/2021/04/01/tudo-sobre-dedo-de-moca-suculenta-pendente-que-e-sucesso-garantido-1.jpg",
-        imagemCard:" http://3.bp.blogspot.com/_TMCefwou43s/TD-U_5PScgI/AAAAAAAACbI/vo2fTVbmcus/s1600/dede-de-moça+010.jpg",
-    },
-    
 ]
-export default PLANTAS;
+
+export default MEIA
