@@ -5,7 +5,6 @@ import { createMaterialTopTabNavigator } from "@react-navigation/material-top-ta
 
 import Populares from "../screens/search/screens/populares";
 import Categorias from "../screens/search/screens/categorias";
-import Familia from "../screens/search/screens/familia";
 import Todas from "../screens/search/screens/todas";
 
 import AppLoading from "expo-app-loading";
